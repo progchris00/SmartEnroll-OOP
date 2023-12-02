@@ -5,10 +5,26 @@
         static void Main()
         {
             string[] choices = { "Login", "Register" };
+            string message = "Choose an option: ";
+            string status = "Logout";
 
-            var LoginRegisterMenu = new Menu(choices, "Hello", "Login");
+            var LoginRegisterMenu = new Menu(choices, message, status);
 
-            LoginRegisterMenu.ShowMenu();
+            int indexChoices = LoginRegisterMenu.ShowMenu();
+
+            switch (choices[indexChoices])
+            {
+                case "Login":
+                {
+                    Account.Login();
+                    break;
+                }
+                // case "Register":
+                // {
+                //     Register();
+                //     break;
+                // }
+            }
 
         }
     }

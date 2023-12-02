@@ -54,7 +54,7 @@ namespace Itec102
 
                 if (keyInfo.Key == ConsoleKey.UpArrow && selectedIndex > 0)
                     {
-                      selectedIndex--;
+                        selectedIndex--;
                     }
 
                 else if (keyInfo.Key == ConsoleKey.DownArrow && selectedIndex < choices.Length - 1)
