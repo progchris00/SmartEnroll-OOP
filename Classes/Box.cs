@@ -14,6 +14,7 @@ namespace Itec102
             this.width = width;
             this.height = height;
         }
+
         public void CreateBox()
         {
             // For Top Border
@@ -30,7 +31,6 @@ namespace Itec102
             // For Bottom Border
             Console.SetCursorPosition(startVertical, startHorizontal + height - 1);
             Console.Write("└" + new string('─', width - 2) + "┘");
-            
         }
     }
 }

@@ -19,11 +19,11 @@
                     Account.Login();
                     break;
                 }
-                // case "Register":
-                // {
-                //     Register();
-                //     break;
-                // }
+                case "Register":
+                {
+                    Account.Register();
+                    break;
+                }
             }
 
         }
