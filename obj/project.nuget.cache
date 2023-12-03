@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "GAsiVNxPScAMsV2YaWkgAdQzp/53Ua+wEzU/UcJewgfmef7W/fsnQEhtQSQDWtGeiPvqlLsDzDdztoKYE3mxEA==",
+  "dgSpecHash": "xiQ/nzq9xk2WIN/jN+0+OQ0ZFPbvfX/hoZhcB5PcpGZhoZ9g+n5bJY+tP2afCaSnHupee/ztw+jqsDC1tHUPEw==",
   "success": true,
   "projectFilePath": "/home/christian/programming/csharp/codes/OOP/OOP.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/christian/.nuget/packages/figgle/0.5.1/figgle.0.5.1.nupkg.sha512"
+  ],
   "logs": []
 }

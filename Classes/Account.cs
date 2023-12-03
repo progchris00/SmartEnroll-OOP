@@ -44,7 +44,7 @@ namespace Itec102
                     var MainBox = new Box(40,5,70,20);
 
                     string[] choices = { "Yes", "No" };
-                    string message = "Create new account instead? ";
+                    string message = "Register account?";
                     string status = "Logout";
 
                     var RegOrLogMenu = new Menu(choices, message, status);
@@ -71,7 +71,7 @@ namespace Itec102
 
         public static List<string> Register()
         {
-            List<string> AccountInformation = new List<string>{"Username:", "First Name:", "Last Name:", "Password:", "Year:", "Course:"};
+            List<string> AccountInformation = new List<string> { "Username:", "First Name:", "Last Name:", "Password:", "Year:", "Course:" };
             List<string> InputInformation = new List<string>();
 
             int startVertical = 53;
@@ -89,14 +89,24 @@ namespace Itec102
                 InfoBox.CreateBox();
 
                 Console.SetCursorPosition(startVertical + 2, startHorizontal + 1);
-                string info = Console.ReadLine();
+                string info;
+
+                do
+                {
+                    info = Console.ReadLine().Trim(); // Trim to remove leading and trailing whitespaces
+                    if (string.IsNullOrEmpty(info))
+                    {
+                        Console.WriteLine("Input cannot be empty. Please enter again.");
+                        Console.SetCursorPosition(startVertical + 2, startHorizontal + 1);
+                    }
+                } while (string.IsNullOrEmpty(info));
 
                 InputInformation.Add(info);
 
                 startHorizontal += 5;
                 top += 5;
             }
-            
+
             return InputInformation;
         }
     }

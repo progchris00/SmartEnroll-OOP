@@ -1,3 +1,5 @@
+using Figgle;
+
 namespace Itec102
 {
     public class Menu
@@ -23,7 +25,7 @@ namespace Itec102
             do
             {
                 Console.Clear();
-                // Console.WriteLine(FiggleFonts.Standard.Render("                                              SmartEnroll"));
+                Console.WriteLine(FiggleFonts.Standard.Render("                                              SmartEnroll"));
 
                 // Draw the box on the left side
                 LeftBox.CreateBox();
