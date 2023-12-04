@@ -26,18 +26,17 @@ namespace Itec102
 
                         if (Validate.Password(username, password))
                         {
-                            Console.WriteLine("password correct");
+                            Animate.ProgressBar();
+                            Message.LoginSuccess();
                             break;
                         }
 
-                        // else
-                        // {   
-                        //     Console.SetCursorPosition(50,16);
-                        //     AnimateProgressBar(45,5,65,11);
-                        //     Console.SetCursorPosition(68,17);
-                        //     textbox_incorrect();
-                        //     continue;
-                        // }
+                        else
+                        {   
+                            Animate.ProgressBar();
+                            Message.IncorrectPassword();
+                            continue;
+                        }
                     }
                 }
 

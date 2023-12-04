@@ -1,3 +1,5 @@
+using System.Net.NetworkInformation;
+
 namespace Itec102
 {
     public class Message
@@ -18,6 +20,24 @@ namespace Itec102
             Console.SetCursorPosition(57,50);
             Console.WriteLine("Registration Success! Press enter to Login.");
             Console.ReadKey();
+        }
+
+        public static void LoginSuccess()
+        {
+            var LoginSuccessBox = new Box(57, 19, 35, 3);
+            LoginSuccessBox.CreateBox();
+
+            Console.SetCursorPosition(66,20);
+            Console.WriteLine("Login Success");
+        }
+
+        public static void IncorrectPassword()
+        {
+            var IncorrectPasswordBox = new Box(57, 19, 35, 3);
+            IncorrectPasswordBox.CreateBox();
+
+            Console.SetCursorPosition(66,20);
+            Console.WriteLine("Incorrect Password");
         }
     }
 }
