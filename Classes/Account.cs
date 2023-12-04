@@ -68,6 +68,7 @@ namespace Itec102
                         }
                     }
                 }
+                break;
             }
         }
 
@@ -112,6 +113,8 @@ namespace Itec102
                 top += 5;
             }
 
+            Message.RegistrationSuccess();
+            Interface.Load();
             return InputInformation;
         }
     }
