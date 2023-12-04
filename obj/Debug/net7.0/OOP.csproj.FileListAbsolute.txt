@@ -13,3 +13,5 @@
 /home/christian/programming/csharp/codes/OOP/obj/Debug/net7.0/OOP.pdb
 /home/christian/programming/csharp/codes/OOP/obj/Debug/net7.0/OOP.genruntimeconfig.cache
 /home/christian/programming/csharp/codes/OOP/obj/Debug/net7.0/ref/OOP.dll
+/home/christian/programming/csharp/codes/OOP/bin/Debug/net7.0/Figgle.dll
+/home/christian/programming/csharp/codes/OOP/obj/Debug/net7.0/OOP.csproj.CopyComplete

@@ -6,6 +6,8 @@ namespace Itec102
     {
         public static void Login()
         {
+            var MainBox = new Box(40,5,70,20);
+            MainBox.CreateBox();
             while (true)
             {
                 Console.SetCursorPosition(50, 8);
@@ -41,28 +43,28 @@ namespace Itec102
 
                 else
                 {
-                    var MainBox = new Box(40,5,70,20);
+                    string userState = "UserNotFound";
 
-                    string[] choices = { "Yes", "No" };
+                    string[] choices = { "No", "Yes" };
                     string message = "Register account?";
                     string status = "Logout";
 
-                    var RegOrLogMenu = new Menu(choices, message, status);
+                    var RegistrationMenu = new Menu(choices, message, status);
 
-                    int indexChoices = RegOrLogMenu.Reg_Log_Menu();
+                    int indexChoices = RegistrationMenu.ShowMenu(userState);
 
                     switch (choices[indexChoices])
                     {
                         
                         case "Yes":
                         {
-                            MainBox.CreateBox();
                             Register();
                             break;
                         }
                         case "No":
                         {
-                            continue;
+                            Login();
+                            break;
                         }
                     }
                 }
@@ -71,6 +73,9 @@ namespace Itec102
 
         public static List<string> Register()
         {
+            var MainBox = new Box(40,5,70,20);
+            MainBox.CreateBox();
+
             List<string> AccountInformation = new List<string> { "Username:", "First Name:", "Last Name:", "Password:", "Year:", "Course:" };
             List<string> InputInformation = new List<string>();
 

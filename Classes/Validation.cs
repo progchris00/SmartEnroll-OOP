@@ -4,7 +4,7 @@ namespace Itec102
     {
         public static bool Username(string username)
         {
-            string[] lines = File.ReadAllLines("users.csv");
+            string[] lines = File.ReadAllLines("data/users.csv");
 
                 // Iterate through each line to find the username
                 foreach (var line in lines)
@@ -26,7 +26,7 @@ namespace Itec102
 
         public static bool Password(string user, string password)
         {
-            string[] lines = File.ReadAllLines("users.csv");
+            string[] lines = File.ReadAllLines("data/users.csv");
 
                 // Iterate through each line to find the username
                 foreach (var line in lines)
