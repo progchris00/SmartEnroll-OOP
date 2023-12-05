@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Diagnostics.Contracts;
 using Microsoft.VisualBasic.FileIO; // Make sure to add a reference to Microsoft.VisualBasic assembly
+using Figgle;
 namespace Itec102;
 public class schedule_1B
 {
     public static void ScheduleB()
     {
+        Console.SetCursorPosition(40,2);
         // Specify the path to your CSV file
         string [] csvFilePath = File.ReadAllLines("schedule_1B.csv");
 
