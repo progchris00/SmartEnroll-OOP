@@ -77,7 +77,7 @@ namespace Itec102
         public int ShowMenuUser(string status, string userState)
         {
             var MainBox = new Box(40,5,70,20);
-            var LeftBox = new Box(0,15,27,8);
+            var LeftBox = new Box(0,7,38,8);
 
             int selectedIndex = 0;
             ConsoleKeyInfo keyInfo;
@@ -107,7 +107,7 @@ namespace Itec102
                     }
 
                     // Print each choice inside the box
-                    Console.SetCursorPosition(2, 17 + i);
+                    Console.SetCursorPosition(2, 11 + i);
                     Console.WriteLine(choices[i]);
 
                     Console.ResetColor();
