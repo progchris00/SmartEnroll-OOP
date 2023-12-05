@@ -1,8 +1,8 @@
 namespace Itec102
 {
-    public class Interface
+    public class Application
     {
-        public static void Load()
+        public static void Run()
         {
             string userState = "Logout";
             string[] choices = { "Login", "Register" };

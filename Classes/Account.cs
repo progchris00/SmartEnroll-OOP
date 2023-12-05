@@ -139,7 +139,7 @@ namespace Itec102
             Message.RegistrationSuccess();
             Csv.Register(InputInformation);
 
-            Interface.Load();
+            Application.Run();
         }
 
         public static bool CheckforDuplicate(string info)
