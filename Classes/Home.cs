@@ -17,7 +17,7 @@ namespace Itec102
             {
                 case "Schedule":
                 {
-                schedule_1A.ScheduleA();
+                    schedule_1A.ScheduleA();
                     break;
                 }
                 case "Logout":

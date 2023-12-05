@@ -27,8 +27,11 @@ namespace Itec102
             var LoginSuccessBox = new Box(57, 19, 35, 3);
             LoginSuccessBox.CreateBox();
 
-            Console.SetCursorPosition(66,20);
+            Console.SetCursorPosition(68,20);
             Console.WriteLine("Login Success");
+
+            Console.SetCursorPosition(61,22);
+            Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
         }
 
