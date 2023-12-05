@@ -101,12 +101,21 @@ namespace Itec102
                 do
                 {
                     info = Console.ReadLine().Trim(); // Trim to remove leading and trailing whitespaces
+                    
                     if (string.IsNullOrEmpty(info))
                     {
                         Console.WriteLine("Input cannot be empty. Please enter again.");
                         Console.SetCursorPosition(startVertical + 2, startHorizontal + 1);
                     }
-                } while (string.IsNullOrEmpty(info));
+
+                    else if (item == "Username:" && CheckforDuplicate(info))
+                    {
+                        Console.WriteLine("Username unavailable. Please choose a different username.");
+                        InfoBox.CreateBox();
+                        Console.SetCursorPosition(startVertical + 2, startHorizontal + 1);
+                    }
+
+                } while (string.IsNullOrEmpty(info) || (item == "Username:" && CheckforDuplicate(info)));
 
                 InputInformation.Add(info);
 
@@ -118,7 +127,28 @@ namespace Itec102
             Csv.Register(InputInformation);
 
             Interface.Load();
-            
+        }
+
+        public static bool CheckforDuplicate(string info)
+        {
+            string[] lines = File.ReadAllLines("data/users.csv");
+
+                // Iterate through each line to find the username
+                foreach (var line in lines)
+                {
+                    // Split the line into fields assuming comma (,) as the separator
+                    string[] fields = line.Split(',');
+
+                    // Assuming the username is in the first column
+                    string storedUsername = fields[0].Trim();
+
+                    // Compare the stored username with the input username (case-sensitive)
+                    if (string.Equals(storedUsername, info, StringComparison.Ordinal))
+                    {
+                        return true;
+                    }
+                }
+            return false;
         }
     }
 }
