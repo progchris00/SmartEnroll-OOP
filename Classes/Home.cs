@@ -11,7 +11,23 @@ namespace Itec102
             string userState = "Login";
 
             var HomeMenu = new Menu(choices, message, status);
-            HomeMenu.ShowMenu(userState);
+            int indexChoices = HomeMenu.ShowMenu(userState);
+
+            switch (choices[indexChoices])
+            {
+                case "Schedule":
+                {
+                schedule_1A.ScheduleA();
+                    break;
+                }
+                case "Logout":
+                {
+                    Message.LogoutSuccess();
+                    Console.ReadKey();
+                    Account.Login();
+                    break;
+                }
+            }
         }
     }
 }

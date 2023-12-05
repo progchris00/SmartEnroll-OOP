@@ -40,5 +40,14 @@ namespace Itec102
             Console.SetCursorPosition(66,20);
             Console.WriteLine("Incorrect Password");
         }
+
+        public static void LogoutSuccess()
+        {
+            var IncorrectPasswordBox = new Box(57, 19, 35, 3);
+            IncorrectPasswordBox.CreateBox();
+
+            Console.SetCursorPosition(66,20);
+            Console.WriteLine("Logout Success");
+        }
     }
 }
