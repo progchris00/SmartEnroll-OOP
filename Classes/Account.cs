@@ -71,7 +71,7 @@ namespace Itec102
             }
         }
 
-        public static List<string> Register()
+        public static void Register()
         {
             var MainBox = new Box(40,5,70,20);
             MainBox.CreateBox();
@@ -113,8 +113,10 @@ namespace Itec102
             }
 
             Message.RegistrationSuccess();
+            Csv.Register(InputInformation);
+
             Interface.Load();
-            return InputInformation;
+            
         }
     }
 }
