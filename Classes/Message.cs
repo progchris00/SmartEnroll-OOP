@@ -29,6 +29,7 @@ namespace Itec102
 
             Console.SetCursorPosition(66,20);
             Console.WriteLine("Login Success");
+            Console.ReadKey();
         }
 
         public static void IncorrectPassword()

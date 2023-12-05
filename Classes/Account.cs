@@ -28,6 +28,8 @@ namespace Itec102
                         {
                             Animate.ProgressBar();
                             Message.LoginSuccess();
+                            Home.Load();
+
                             break;
                         }
 
