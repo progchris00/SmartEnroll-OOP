@@ -4,7 +4,10 @@
     {
         static void Main()
         {
+           
+            schedule_1A.ScheduleA();
             Interface.Load();
+            
         }
     }
 }

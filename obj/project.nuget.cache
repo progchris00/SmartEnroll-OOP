@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "xiQ/nzq9xk2WIN/jN+0+OQ0ZFPbvfX/hoZhcB5PcpGZhoZ9g+n5bJY+tP2afCaSnHupee/ztw+jqsDC1tHUPEw==",
+  "dgSpecHash": "7sRlLQck7zb6r0UwtGPELovfdTCn86EP/ROFz7eNfaPrgatmyEPvG9/LA0ZCXFBjtmE7lquXoDzgMBZfh41qUw==",
   "success": true,
-  "projectFilePath": "/home/christian/programming/csharp/codes/OOP/OOP.csproj",
+  "projectFilePath": "C:\\Users\\astaw\\je\\SmartEnroll-OOP\\OOP.csproj",
   "expectedPackageFiles": [
-    "/home/christian/.nuget/packages/figgle/0.5.1/figgle.0.5.1.nupkg.sha512"
+    "C:\\Users\\astaw\\.nuget\\packages\\figgle\\0.5.1\\figgle.0.5.1.nupkg.sha512"
   ],
   "logs": []
 }

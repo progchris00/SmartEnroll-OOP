@@ -2,26 +2,34 @@
 using System.Diagnostics.Contracts;
 using Microsoft.VisualBasic.FileIO; // Make sure to add a reference to Microsoft.VisualBasic assembly
 
-class Program
+namespace Itec102;
+public class schedule_1A
 {
-    static void Main()
+    
+    public static void ScheduleA()
     {
+        Console.SetCursorPosition(40,2);
         // Specify the path to your CSV file
-        string [] csvFilePath = File.ReadAllLines("schedule_1A.csv");
-
+        string [] csvFilePath = File.ReadAllLines("data/schedule_1A.csv");
+        var MainBox = new Box(38,0,130,60);
+        MainBox.CreateBox();
+        Console.SetCursorPosition(40,2);
         foreach(var SubjectCode in csvFilePath)
     {
+        
         string [] fields = SubjectCode.Split(',');
-
 
         string storedSection = fields[0].Trim();
         string storedSubjCode = fields[1].Trim();
         string storedSubjTitle = fields[2].Trim();
         string storedUnits = fields[3].Trim();
         string storedTimeDate = fields[4].Trim();
-
-        Console.WriteLine($"{storedSection, -15} \t {storedSubjCode, -15} \t {storedSubjTitle, -50} \t {storedUnits, -10} \t {storedTimeDate, -20}"); // Keep the console window open
+       
+       
+        Console.WriteLine( $"{storedSection, -10} \t {storedSubjCode, -10} \t {storedSubjTitle, -40} \t {storedUnits, -10} \t {storedTimeDate, -20}"); // Keep the console window open
         Console.WriteLine();
+        Console.SetCursorPosition(40, Console.CursorTop + 1);
+        
         
     }
     Console.ReadKey();
