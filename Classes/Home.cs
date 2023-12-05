@@ -5,7 +5,7 @@ namespace Itec102
         public static void Load()
         {
             string[] choices = { "Schedule", "Logout" };
-            string message = "Choose option: ";
+            string message = "Choose an option: ";
             string status = "Logout";
 
             string userState = "Login";

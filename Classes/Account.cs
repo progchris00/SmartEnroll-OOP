@@ -78,7 +78,7 @@ namespace Itec102
             int messageBoxTop = 14;
             int messagePosition = 15;
 
-            var MainBox = new Box(40,5,70,20);
+            var MainBox = new Box(40,5,70,50);
             MainBox.CreateBox();
 
             List<string> AccountInformation = new List<string> { "Username:", "First Name:", "Last Name:", "Password:", "Year:", "Course:" };
@@ -117,10 +117,10 @@ namespace Itec102
 
                     else if (item == "Username:" && CheckforDuplicate(info))
                     {
-                        var EmptyInput = new Box(59, messageBoxTop, 35, 3);
-                        EmptyInput.CreateBox();
-                        Console.SetCursorPosition(60, messagePosition);
-                        Console.WriteLine("Username unavailable. Please choose a different username.");
+                        var UsedUsername = new Box(59, messageBoxTop, 35, 3);
+                        UsedUsername.CreateBox();
+                        Console.SetCursorPosition(64, messagePosition);
+                        Console.WriteLine("Username already in use.");
 
                         InfoBox.CreateBox();
                         Console.SetCursorPosition(startVertical + 2, startHorizontal + 1);

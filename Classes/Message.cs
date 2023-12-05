@@ -46,20 +46,11 @@ namespace Itec102
 
         public static void LogoutSuccess()
         {
-            var IncorrectPasswordBox = new Box(57, 19, 35, 3);
-            IncorrectPasswordBox.CreateBox();
+            var LogoutBox = new Box(57, 13, 35, 3);
+            LogoutBox.CreateBox();
 
-            Console.SetCursorPosition(66,20);
-            Console.WriteLine("Logout Success");
-        }
-
-        public static void EmptyInput()
-        {
-            var EmptyInput = new Box(59, 14, 35, 3);
-            EmptyInput.CreateBox();
-
-            Console.SetCursorPosition(60,15);
-            Console.WriteLine("Input cannot be empty, try again.");
+            Console.SetCursorPosition(65,14);
+            Console.WriteLine("You've been logout.");
         }
     }
 }
