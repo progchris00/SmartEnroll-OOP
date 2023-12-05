@@ -52,5 +52,14 @@ namespace Itec102
             Console.SetCursorPosition(66,20);
             Console.WriteLine("Logout Success");
         }
+
+        public static void EmptyInput()
+        {
+            var EmptyInput = new Box(59, 14, 35, 3);
+            EmptyInput.CreateBox();
+
+            Console.SetCursorPosition(60,15);
+            Console.WriteLine("Input cannot be empty, try again.");
+        }
     }
 }

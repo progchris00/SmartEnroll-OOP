@@ -75,6 +75,9 @@ namespace Itec102
 
         public static void Register()
         {
+            int messageBoxTop = 14;
+            int messagePosition = 15;
+
             var MainBox = new Box(40,5,70,20);
             MainBox.CreateBox();
 
@@ -104,13 +107,21 @@ namespace Itec102
                     
                     if (string.IsNullOrEmpty(info))
                     {
-                        Console.WriteLine("Input cannot be empty. Please enter again.");
+                        var EmptyInput = new Box(59, messageBoxTop, 35, 3);
+                        EmptyInput.CreateBox();
+                        Console.SetCursorPosition(60, messagePosition);
+                        Console.WriteLine("Input cannot be empty, try again.");
+
                         Console.SetCursorPosition(startVertical + 2, startHorizontal + 1);
                     }
 
                     else if (item == "Username:" && CheckforDuplicate(info))
                     {
+                        var EmptyInput = new Box(59, messageBoxTop, 35, 3);
+                        EmptyInput.CreateBox();
+                        Console.SetCursorPosition(60, messagePosition);
                         Console.WriteLine("Username unavailable. Please choose a different username.");
+
                         InfoBox.CreateBox();
                         Console.SetCursorPosition(startVertical + 2, startHorizontal + 1);
                     }
@@ -120,6 +131,8 @@ namespace Itec102
                 InputInformation.Add(info);
 
                 startHorizontal += 5;
+                messageBoxTop += 5;
+                messagePosition += 5;
                 top += 5;
             }
 
