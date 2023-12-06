@@ -90,13 +90,11 @@ namespace Itec102
                 // Print the message inside the box
                 Console.SetCursorPosition(2, 9);
                 Console.WriteLine(message);
-            while (status == "Logout")
-            {
-                 Message.LogoutSuccess();
-                 Account.Login();
-                 
-                     
-            }
+                while (status == "Logout")
+                {
+                    Message.LogoutSuccess();
+                    Account.Login();
+                }
                 // Print the choices inside the box
                 for (int i = 0; i < choices.Length; i++)
                 {
@@ -112,7 +110,6 @@ namespace Itec102
 
                     Console.ResetColor();
 
-                   
                 }
 
                 keyInfo = Console.ReadKey();

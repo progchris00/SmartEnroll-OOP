@@ -32,6 +32,7 @@ namespace Itec102
 
             Console.SetCursorPosition(61,22);
             Console.WriteLine("Press any key to continue...");
+            Console.SetCursorPosition(89,22);
             Console.ReadKey();
         }
 
@@ -51,6 +52,10 @@ namespace Itec102
 
             Console.SetCursorPosition(65,14);
             Console.WriteLine("You've been logout.");
+
+            Console.SetCursorPosition(61,22);
+            Console.WriteLine("Press any key to continue...");
+            Console.SetCursorPosition(89,22);
         }
     }
 }
