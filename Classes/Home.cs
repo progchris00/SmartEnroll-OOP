@@ -18,15 +18,14 @@ namespace Itec102
             {
                 case "Schedule":
                 {
-                    schedule_1A.ScheduleA();
-                    HomeMenu.ShowMenuUser(userState, status);
+                    Schedule.Show("1A");
+                    // HomeMenu.ShowMenuUser(userState, status);
 
-                    if (choices.Contains("Logout"))
+                    // if (choices.Contains("Logout"))
 
-                       {
-                            Application.Run();
-                       }
-                    
+                    //    {
+                    //         Application.Run();
+                    //    }
                     break;  
                 }
 
