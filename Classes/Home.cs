@@ -1,10 +1,11 @@
+using System.Runtime;
+
 namespace Itec102
 {
     public class Home
     {
         public static void Load()
         {
-            
             string[] choices = { "Schedule", "Logout" };
             string message = "Choose an option: ";
             string status = "Logout";

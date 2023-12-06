@@ -37,6 +37,12 @@ namespace Itec102
                     Message.UsernameNotFound();
                 }
 
+                else if (userState == "Login")
+                {
+                    string CurrentUser = "xxchrisxx";
+                    Profile.Load(CurrentUser);
+                }
+
                 // Print the message inside the box
                 Console.SetCursorPosition(2, 9);
                 Console.WriteLine(message);
