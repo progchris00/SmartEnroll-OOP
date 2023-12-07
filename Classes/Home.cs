@@ -4,7 +4,7 @@ namespace Itec102
 {
     public class Home
     {
-        public static void Load(string CurrentUser)
+        public static void Load()
         {
             string[] choices = { "Schedule", "Logout" };
             string message = "Choose an option: ";
@@ -13,7 +13,7 @@ namespace Itec102
             string userState = "Login";
 
             var HomeMenu = new Menu(choices, message, status);
-            int indexChoices = HomeMenu.ShowMenu(userState, CurrentUser);
+            int indexChoices = HomeMenu.ShowMenu(userState);
             
             switch (choices[indexChoices])
             {

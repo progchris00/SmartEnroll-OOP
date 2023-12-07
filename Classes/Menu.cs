@@ -15,7 +15,7 @@ namespace Itec102
             this.message = message;
             this.status = status;
         }
-        public int ShowMenu(string userState, string CurrentUser)
+        public int ShowMenu(string userState)
         {
             var MainBox = new Box(40,5,70,20);
             var LeftBox = new Box(0,7,38,8);
@@ -39,7 +39,7 @@ namespace Itec102
 
                 else if (userState == "Login")
                 {
-                    Profile.Load(CurrentUser);
+                    Profile.Load();
                 }
 
                 // Print the message inside the box

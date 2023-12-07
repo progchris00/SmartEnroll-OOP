@@ -30,7 +30,8 @@ namespace Itec102
                         {
                             Animate.ProgressBar();
                             Message.LoginSuccess();;
-                            Home.Load(username);
+                            Session.SetCurrentUser(username);
+                            Home.Load();
 
                             break;
                         }
@@ -54,7 +55,7 @@ namespace Itec102
 
                     var RegistrationMenu = new Menu(choices, message, status);
 
-                    int indexChoices = RegistrationMenu.ShowMenu(userState, "");
+                    int indexChoices = RegistrationMenu.ShowMenu(userState);
 
                     switch (choices[indexChoices])
                     {

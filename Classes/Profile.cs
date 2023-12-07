@@ -4,27 +4,29 @@ namespace Itec102
 {
     public class Profile
     {
-        public static void Load(string CurrentUser)
+        public static void Load()
         {
             string[] lines = File.ReadAllLines("data/users.csv");
 
             string[] fields = null;
 
-                // Iterate through each line to find the username
-                foreach (var line in lines)
-                {
-                    // Split the line into fields assuming comma (,) as the separator
-                    fields = line.Split(',');
+            string CurrentUser = Session.GetCurrentUser();
 
-                    // Assuming the username is in the first column
-                    string storedUsername = fields[0].Trim();
-                    
-                    if (storedUsername.Equals(CurrentUser, StringComparison.OrdinalIgnoreCase))
-                    {
-                        // If the username is found, exit the loop
-                        break;
-                    }
+            // Iterate through each line to find the username
+            foreach (var line in lines)
+            {
+                // Split the line into fields assuming comma (,) as the separator
+                fields = line.Split(',');
+
+                // Assuming the username is in the first column
+                string storedUsername = fields[0].Trim();
+                
+                if (storedUsername.Equals(CurrentUser, StringComparison.OrdinalIgnoreCase))
+                {
+                    // If the username is found, exit the loop
+                    break;
                 }
+            }
 
             var ProfileBox = new Box(112, 7, 45, 15);
             ProfileBox.CreateBox();
@@ -36,10 +38,10 @@ namespace Itec102
             Console.WriteLine($"Name: {fields[1]} {fields[2]}");
 
             Console.SetCursorPosition(116, 14);
-            Console.WriteLine($"Year: 1st year");
+            Console.WriteLine($"Year: {fields[5]}st year");
 
             Console.SetCursorPosition(116, 16);
-            Console.WriteLine($"Course: BSCS - 1B");
+            Console.WriteLine($"Course: {fields[6]} - 1B");
         }
     }
 }

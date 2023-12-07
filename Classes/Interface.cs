@@ -11,7 +11,7 @@ namespace Itec102
 
             var LoginRegisterMenu = new Menu(choices, message, status);
 
-            int indexChoices = LoginRegisterMenu.ShowMenu(userState, "");
+            int indexChoices = LoginRegisterMenu.ShowMenu(userState);
 
             Action.HandleAction(choices[indexChoices]);
         }
