@@ -8,7 +8,7 @@ namespace Itec102
 
             using (StreamWriter sw = File.AppendText(filePath))
             {
-                sw.WriteLine($"{information[0]},{information[1]},{information[2]},{information[3]},{information[4]},{information[5]}");
+                sw.WriteLine($"{information[0]},{information[1]},{information[2]},{information[3]},user,{information[4]},{information[5]}");
             }
         }
     }
