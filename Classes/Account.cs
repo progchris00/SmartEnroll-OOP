@@ -29,8 +29,8 @@ namespace Itec102
                         if (Validate.Password(username, password))
                         {
                             Animate.ProgressBar();
-                            Message.LoginSuccess();
-                            Home.Load();
+                            Message.LoginSuccess();;
+                            Home.Load(username);
 
                             break;
                         }
@@ -54,7 +54,7 @@ namespace Itec102
 
                     var RegistrationMenu = new Menu(choices, message, status);
 
-                    int indexChoices = RegistrationMenu.ShowMenu(userState);
+                    int indexChoices = RegistrationMenu.ShowMenu(userState, "");
 
                     switch (choices[indexChoices])
                     {
