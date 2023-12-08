@@ -1,3 +1,4 @@
+using System.Text;
 namespace Itec102
 {
     public class Inputs
@@ -25,7 +26,7 @@ namespace Itec102
             return password;
         } 
 
-        static string MaskPassword()
+        public static string MaskPassword()
         {
             string input = "";
             ConsoleKeyInfo key;

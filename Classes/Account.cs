@@ -1,3 +1,4 @@
+using System.ComponentModel;
 using System.Data;
 using System.Net;
 using System.Net.NetworkInformation;
@@ -106,6 +107,13 @@ namespace Itec102
 
                 do
                 {
+                    if (item == "Password:")
+                    {
+                        info = Inputs.MaskPassword();
+                        InputInformation.Add(info);
+
+                        break;
+                    }
                     info = Console.ReadLine().Trim(); // Trim to remove leading and trailing whitespaces
                     
                     if (string.IsNullOrEmpty(info))
@@ -131,7 +139,10 @@ namespace Itec102
 
                 } while (string.IsNullOrEmpty(info) || (item == "Username:" && CheckforDuplicate(info)));
 
-                InputInformation.Add(info);
+                if(item != "Password:")
+                {
+                    InputInformation.Add(info);
+                }
 
                 startHorizontal += 5;
                 messageBoxTop += 5;
