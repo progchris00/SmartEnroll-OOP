@@ -110,34 +110,65 @@ namespace Itec102
                     if (item == "Password:")
                     {
                         info = Inputs.MaskPassword();
-                        InputInformation.Add(info);
 
-                        break;
+                        if (string.IsNullOrEmpty(info))
+                        {
+                            // Display an error message for an empty password
+                            var EmptyPasswordBox = new Box(56, messageBoxTop, 39, 3);
+                            EmptyPasswordBox.CreateBox();
+                            Console.SetCursorPosition(58, messagePosition);
+                            Console.WriteLine("Password cannot be empty, try again.");
+
+                            // Move the cursor to the password input position
+                            Console.SetCursorPosition(startVertical + 2, startHorizontal + 1);
+                        }
+
+                        else if(info.Count() < 8)
+                        {
+                            var WeakPasswordBox = new Box(58, messageBoxTop, 38, 3);
+                            WeakPasswordBox.CreateBox();
+                            Console.SetCursorPosition(60, messagePosition);
+                            Console.WriteLine("Please create a stronger password.");
+
+                            InfoBox.CreateBox();
+                            // Move the cursor to the password input position
+                            Console.SetCursorPosition(startVertical + 2, startHorizontal + 1);
+                        }
+
+                        else
+                        {
+                            // Add the password to the list and exit the loop
+                            InputInformation.Add(info);
+                            break;
+                        }
                     }
-                    info = Console.ReadLine().Trim(); // Trim to remove leading and trailing whitespaces
-                    
-                    if (string.IsNullOrEmpty(info))
+                    else
                     {
-                        var EmptyInput = new Box(59, messageBoxTop, 35, 3);
-                        EmptyInput.CreateBox();
-                        Console.SetCursorPosition(60, messagePosition);
-                        Console.WriteLine("Input cannot be empty, try again.");
+                        // For other inputs (non-password)
+                        info = Console.ReadLine().Trim(); // Trim to remove leading and trailing whitespaces
 
-                        Console.SetCursorPosition(startVertical + 2, startHorizontal + 1);
+                        if (string.IsNullOrEmpty(info))
+                        {
+                            var EmptyInput = new Box(59, messageBoxTop, 35, 3);
+                            EmptyInput.CreateBox();
+                            Console.SetCursorPosition(60, messagePosition);
+                            Console.WriteLine("Input cannot be empty, try again.");
+
+                            Console.SetCursorPosition(startVertical + 2, startHorizontal + 1);
+                        }
+                        else if (item == "Username:" && CheckforDuplicate(info))
+                        {
+                            var UsedUsername = new Box(59, messageBoxTop, 35, 3);
+                            UsedUsername.CreateBox();
+                            Console.SetCursorPosition(64, messagePosition);
+                            Console.WriteLine("Username already in use.");
+
+                            InfoBox.CreateBox();
+                            Console.SetCursorPosition(startVertical + 2, startHorizontal + 1);
+                        }
                     }
 
-                    else if (item == "Username:" && CheckforDuplicate(info))
-                    {
-                        var UsedUsername = new Box(59, messageBoxTop, 35, 3);
-                        UsedUsername.CreateBox();
-                        Console.SetCursorPosition(64, messagePosition);
-                        Console.WriteLine("Username already in use.");
-
-                        InfoBox.CreateBox();
-                        Console.SetCursorPosition(startVertical + 2, startHorizontal + 1);
-                    }
-
-                } while (string.IsNullOrEmpty(info) || (item == "Username:" && CheckforDuplicate(info)));
+                } while (string.IsNullOrEmpty(info) || (item == "Username:" && CheckforDuplicate(info)) || (item == "Password:") && (info.Count() < 8));
 
                 if(item != "Password:")
                 {
