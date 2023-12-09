@@ -22,5 +22,13 @@ namespace Itec102
                 return builder.ToString();
             }
         }
+        public static bool VerifyPassword(string enteredPassword, string storedHashedPassword)
+        {
+            // Hash the entered password using the same method used during registration
+            string hashedEnteredPassword = HashPassword(enteredPassword);
+
+            // Compare the stored hash with the newly hashed entered password
+            return hashedEnteredPassword == storedHashedPassword;
+        }
     }
 }

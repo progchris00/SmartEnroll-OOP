@@ -39,7 +39,7 @@ namespace Itec102
                     string storedUsername = fields[0].Trim();
 
                     // Compare the stored username with the input username (case-sensitive)
-                    if (string.Equals(storedPassword, password, StringComparison.Ordinal) && string.Equals(storedUsername, user, StringComparison.Ordinal))
+                    if (Security.VerifyPassword(password, storedPassword) && string.Equals(storedUsername, user, StringComparison.Ordinal))
                     {
                         return true;
                     }
