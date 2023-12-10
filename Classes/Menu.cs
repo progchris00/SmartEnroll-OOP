@@ -17,6 +17,10 @@ namespace Itec102
         }
         public int ShowMenu(string userState)
         {
+            DateTime currentDate = DateTime.Now;
+            string DateToday = currentDate.ToString("MMMM/dd/yyyy");
+            string DayToday = currentDate.ToString("dddd");
+
             var MainBox = new Box(40,5,70,20);
             var LeftBox = new Box(0,7,38,8);
 
@@ -39,6 +43,7 @@ namespace Itec102
 
                 else if (userState == "Login")
                 {
+                    Schedule.Today(DayToday, DateToday);
                     Profile.Load();
                 }
 

@@ -39,4 +39,16 @@ public class Schedule
             Console.SetCursorPosition(40, Console.CursorTop + 2); 
         } 
     }
+
+    public static void Today(string DayToday, string DateToday)
+    {
+        Console.SetCursorPosition(82, 7); 
+        Console.WriteLine($"{DayToday}, {DateToday}");
+
+        if (DayToday == "Sunday")
+        {
+            Console.SetCursorPosition(54, 14); 
+            Console.WriteLine("There are no classes scheduled for today.");
+        }
+    }
 }
