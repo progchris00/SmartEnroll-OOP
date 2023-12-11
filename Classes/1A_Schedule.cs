@@ -2,6 +2,7 @@
 using System.Diagnostics.Contracts;
 using Microsoft.VisualBasic.FileIO; // Make sure to add a reference to Microsoft.VisualBasic assembly
 using Figgle;
+using System.Diagnostics;
 
 namespace Itec102;
 public class Schedule
@@ -49,6 +50,31 @@ public class Schedule
         {
             Console.SetCursorPosition(54, 14); 
             Console.WriteLine("There are no classes scheduled for today.");
+        }
+        else
+        {
+            string[] csvFilePath = {};
+            csvFilePath = File.ReadAllLines("data/1B_Schedule.csv");
+            
+            int top = 13;
+            foreach(var SubjectCode in csvFilePath)
+            {
+                string[] fields = SubjectCode.Split(',');
+
+                string SubjectToday = fields[0].Trim();
+                
+                Console.SetCursorPosition(58, 10); 
+                Console.WriteLine("SUBJECT\t\tTIME");
+                if (SubjectToday == DayToday)
+                {
+                    string storedSubjectCode = fields[1].Trim();
+                    string storedSubjectTitle = fields[2].Trim();
+                    string storedTimeDate = fields[3].Trim();
+                    Console.SetCursorPosition(58, top); 
+                    Console.WriteLine($"{storedSubjectCode,-15}{storedTimeDate}");
+                    top += 2;
+                }
+            }
         }
     }
 }
