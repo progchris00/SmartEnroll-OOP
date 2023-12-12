@@ -65,7 +65,7 @@ public class Schedule
                 
                 Console.SetCursorPosition(58, 10); 
                 Console.WriteLine("SUBJECT\t\tTIME");
-                if (SubjectToday == DayToday)
+                if (SubjectToday == "Tuesday")
                 {
                     string storedSubjectCode = fields[1].Trim();
                     string storedSubjectTitle = fields[2].Trim();
