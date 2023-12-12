@@ -9,7 +9,7 @@ public class schedule_1B
     {
         Console.SetCursorPosition(40,2);
         // Specify the path to your CSV file
-        string [] csvFilePath = File.ReadAllLines("schedule_1B.csv");
+        string [] csvFilePath = File.ReadAllLines("Schedule.csv");
 
         foreach(var SubjectCode in csvFilePath)
         

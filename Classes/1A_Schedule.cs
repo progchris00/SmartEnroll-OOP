@@ -3,6 +3,7 @@ using System.Diagnostics.Contracts;
 using Microsoft.VisualBasic.FileIO; // Make sure to add a reference to Microsoft.VisualBasic assembly
 using Figgle;
 using System.Diagnostics;
+using System.Reflection.PortableExecutable;
 
 namespace Itec102;
 public class Schedule
@@ -54,7 +55,7 @@ public class Schedule
         else
         {
             string[] csvFilePath = {};
-            csvFilePath = File.ReadAllLines("data/1B_Schedule.csv");
+            csvFilePath = File.ReadAllLines("data/Schedule.csv");
             
             int top = 13;
             foreach(var SubjectCode in csvFilePath)
@@ -62,10 +63,11 @@ public class Schedule
                 string[] fields = SubjectCode.Split(',');
 
                 string SubjectToday = fields[0].Trim();
+                string UserSection = fields[4].Trim();
                 
                 Console.SetCursorPosition(58, 10); 
                 Console.WriteLine("SUBJECT\t\tTIME");
-                if (SubjectToday == "Tuesday")
+                if (SubjectToday == DayToday && UserSection == Session.GetCurrentUserSection(Session.GetCurrentUser())) 
                 {
                     string storedSubjectCode = fields[1].Trim();
                     string storedSubjectTitle = fields[2].Trim();

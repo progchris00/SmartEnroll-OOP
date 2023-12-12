@@ -1,3 +1,5 @@
+using System.Reflection.PortableExecutable;
+
 namespace Itec102
 {
     public class Session
@@ -11,6 +13,24 @@ namespace Itec102
         public static string GetCurrentUser()
         {
             return currentUser;
+        }
+
+        public static string GetCurrentUserSection(string CurrentUser)
+        {
+            string[] users = {};
+            users = File.ReadAllLines("data/users.csv");
+
+            foreach (var user in users)
+            {
+                string[] fields = user.Split(',');
+                
+                if (fields[0] == CurrentUser)
+                {
+                    string section = fields[7].Trim();
+                    return section;
+                }
+            }
+            return null;
         }
     }
 }
