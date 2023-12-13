@@ -41,7 +41,7 @@ namespace Itec102
             Console.WriteLine($"Year: {fields[5]}st year");
 
             Console.SetCursorPosition(116, 16);
-            Console.WriteLine($"Course: {fields[6]} - 1B");
+            Console.WriteLine($"Course: {fields[6]} - {fields[5]}{fields[7]}");
         }
     }
 }
