@@ -142,6 +142,12 @@ namespace Itec102
                             break;
                         }
                     }
+
+                    else if(item == "Year:")
+                    {
+                        info = GetYear();
+                    }
+
                     else
                     {
                         // For other inputs (non-password)
@@ -207,6 +213,42 @@ namespace Itec102
                     }
                 }
             return false;
+        }
+
+        public static string GetYear()
+        {
+            string input = "";
+            while (true)
+            {
+                ConsoleKeyInfo key = Console.ReadKey(true);
+
+                if (key.Key == ConsoleKey.Enter)
+                {
+                    // If Enter key is pressed, exit the loop
+                    break;
+                }
+                else if (key.Key == ConsoleKey.Backspace)
+                {
+                    // If Backspace key is pressed, remove the last character
+                    if (input.Length > 0)
+                    {
+                        input = input.Substring(0, input.Length - 1);
+                        Console.Write("\b \b"); // Move the cursor back and erase the character
+                    }
+                }
+                else if (char.IsDigit(key.KeyChar))
+                {
+                    // If the pressed key is a digit, allow it
+                    input += key.KeyChar;
+                    Console.Write(key.KeyChar);
+                }
+                else
+                {
+                    // If the pressed key is not a digit or Backspace, ignore it
+                    Console.Beep(); // Optionally, you can beep to indicate an invalid input
+                }
+            }
+            return input;
         }
     }
 }
