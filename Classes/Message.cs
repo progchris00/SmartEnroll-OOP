@@ -47,8 +47,10 @@ namespace Itec102
 
         public static void LogoutSuccess()
         {
-            var LogoutBox = new Box(57, 13, 35, 3);
-            LogoutBox.CreateBox();
+            Console.Clear();
+            Console.ReadKey();
+            var LogoutMessageBox = new Box(57, 13, 35, 3);
+            LogoutMessageBox.CreateBox();
 
             Console.SetCursorPosition(65,14);
             Console.WriteLine("You've been logout.");

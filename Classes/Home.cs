@@ -28,7 +28,6 @@ namespace Itec102
                 {
                     Message.LogoutSuccess();
                     Console.ReadKey();
-
                     Application.Run();
 
                     break;
