@@ -1,4 +1,5 @@
 using System.Net.NetworkInformation;
+using Figgle;
 
 namespace Itec102
 {
@@ -47,8 +48,13 @@ namespace Itec102
 
         public static void LogoutSuccess()
         {
+            var MainBox = new Box(40,5,70,20);
+            
             Console.Clear();
-            Console.ReadKey();
+            Console.WriteLine(FiggleFonts.Standard.Render("                                              SmartEnroll"));
+            
+            MainBox.CreateBox();
+
             var LogoutMessageBox = new Box(57, 13, 35, 3);
             LogoutMessageBox.CreateBox();
 
