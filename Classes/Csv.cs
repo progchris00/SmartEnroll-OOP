@@ -14,7 +14,7 @@ namespace Itec102
             {
                 string HashedPassword = Security.HashPassword(information[3]);
 
-                sw.WriteLine($"{information[0]},{myTI.ToTitleCase(information[1])},{myTI.ToTitleCase(information[2])},{HashedPassword},user,{information[4]},{information[5]},{information[6]}");
+                sw.WriteLine($"{information[0]},{myTI.ToTitleCase(information[1])},{myTI.ToTitleCase(information[2])},{HashedPassword},user,{information[4]},{information[5].ToUpper()},{information[6].ToUpper()}");
             }
         }
     }
