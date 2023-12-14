@@ -224,28 +224,24 @@ namespace Itec102
 
                 if (key.Key == ConsoleKey.Enter)
                 {
-                    // If Enter key is pressed, exit the loop
                     break;
                 }
                 else if (key.Key == ConsoleKey.Backspace)
                 {
-                    // If Backspace key is pressed, remove the last character
                     if (input.Length > 0)
                     {
                         input = input.Substring(0, input.Length - 1);
-                        Console.Write("\b \b"); // Move the cursor back and erase the character
+                        Console.Write("\b \b");
                     }
                 }
                 else if (char.IsDigit(key.KeyChar))
                 {
-                    // If the pressed key is a digit, allow it
                     input += key.KeyChar;
                     Console.Write(key.KeyChar);
                 }
                 else
                 {
-                    // If the pressed key is not a digit or Backspace, ignore it
-                    Console.Beep(); // Optionally, you can beep to indicate an invalid input
+                    Console.Beep();
                 }
             }
             return input;
