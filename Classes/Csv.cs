@@ -10,7 +10,7 @@ namespace Itec102
             {
                 string HashedPassword = Security.HashPassword(information[3]);
 
-                sw.WriteLine($"{information[0]},{information[1]},{information[2]},{HashedPassword},user,{information[4]},{information[5]}");
+                sw.WriteLine($"{information[0]},{information[1].ToUpper()},{information[2].ToUpper()},{HashedPassword},user,{information[4]},{information[5]},{information[6]}");
             }
         }
     }
