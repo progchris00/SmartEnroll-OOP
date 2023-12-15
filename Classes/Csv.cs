@@ -12,9 +12,9 @@ namespace Itec102
 
             using (StreamWriter sw = File.AppendText(filePath))
             {
-                string HashedPassword = Security.HashPassword(information[3]);
+                string HashedPassword = Security.HashPassword(information[4]);
 
-                sw.WriteLine($"{information[0]},{myTI.ToTitleCase(information[1])},{myTI.ToTitleCase(information[2])},{HashedPassword},user,{information[4]},{information[5].ToUpper()},{information[6].ToUpper()}");
+                sw.WriteLine($"{information[0]},{myTI.ToTitleCase(information[1])},{myTI.ToTitleCase(information[2])},{information[3]},{HashedPassword},user,{information[5]},{information[6].ToUpper()},{information[7].ToUpper()}");
             }
         }
     }

@@ -1,2 +1,3 @@
-username,firstname,lastname,password,role,year,course,section
-xxchrisxx,Christian,Ortiz,5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8,user,1,BSCS,B
+username,firstname,lastname,email,password,role,year,course,section
+asd,Christian,Ortiz,asdasdas,513856f81919583c7cc4bd174d1d83179b50a059990478f2af48eb1647f4af7e,user,1,BSCS,B
+xxchrisxx,Christian,Ortiz,chrisortiz806@gmail.com,5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8,user,1,BSCS,B

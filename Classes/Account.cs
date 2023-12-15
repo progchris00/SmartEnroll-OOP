@@ -85,7 +85,7 @@ namespace Itec102
             var MainBox = new Box(40,5,70,50);
             MainBox.CreateBox();
 
-            List<string> AccountInformation = new List<string> { "Username:", "First Name:", "Last Name:", "Password:", "Year:", "Course:", "Section:" };
+            List<string> AccountInformation = new List<string> { "Username:", "First Name:", "Last Name:", "Email:", "Password:", "Year:", "Course:", "Section:" };
             List<string> InputInformation = new List<string>();
 
             int startVertical = 53;
