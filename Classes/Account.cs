@@ -2,6 +2,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Net;
 using System.Net.NetworkInformation;
+using System.Text.RegularExpressions;
 
 namespace Itec102
 {
@@ -145,7 +146,7 @@ namespace Itec102
 
                     else if(item == "Year:")
                     {
-                        info = GetYear();
+                        info = ValidateYear();
                     }
 
                     else
@@ -172,9 +173,20 @@ namespace Itec102
                             InfoBox.CreateBox();
                             Console.SetCursorPosition(startVertical + 2, startHorizontal + 1);
                         }
+
+                        else if (item == "Email:" && !ValidateEmail(info))
+                        {
+                            var InvalidEmailBox = new Box(59, messageBoxTop, 35, 3);
+                            InvalidEmailBox.CreateBox();
+                            Console.SetCursorPosition(63, messagePosition);
+                            Console.WriteLine("Please enter a valid email.");
+
+                            InfoBox.CreateBox();
+                            Console.SetCursorPosition(startVertical + 2, startHorizontal + 1);
+                        }
                     }
 
-                } while (string.IsNullOrEmpty(info) || (item == "Username:" && CheckforDuplicate(info)) || (item == "Password:") && (info.Count() < 8));
+                } while (string.IsNullOrEmpty(info) || (item == "Username:" && CheckforDuplicate(info)) || (item == "Password:") && (info.Count() < 8) || item == "Email:" && !ValidateEmail(info));
 
                 if(item != "Password:")
                 {
@@ -215,7 +227,7 @@ namespace Itec102
             return false;
         }
 
-        public static string GetYear()
+        public static string ValidateYear()
         {
             string input = "";
             while (true)
@@ -245,6 +257,17 @@ namespace Itec102
                 }
             }
             return input;
+        }
+
+        public static bool ValidateEmail(string email)
+        {
+            string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+
+            Regex regex = new Regex(pattern);
+
+            Match match = regex.Match(email);
+
+            return match.Success;
         }
     }
 }

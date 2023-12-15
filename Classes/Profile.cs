@@ -38,10 +38,10 @@ namespace Itec102
             Console.WriteLine($"Name: {fields[1]} {fields[2]}");
 
             Console.SetCursorPosition(116, 14);
-            Console.WriteLine($"Year: {fields[5]}st year");
+            Console.WriteLine($"Year: {fields[6]}st year");
 
             Console.SetCursorPosition(116, 16);
-            Console.WriteLine($"Course: {fields[6]} - {fields[5]}{fields[7]}");
+            Console.WriteLine($"Course: {fields[7]} - {fields[6]}{fields[8]}");
         }
     }
 }

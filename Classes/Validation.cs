@@ -35,7 +35,7 @@ namespace Itec102
                     string[] fields = line.Split(',');
 
                     // Assuming the username is in the first column
-                    string storedPassword = fields[3].Trim();
+                    string storedPassword = fields[4].Trim();
                     string storedUsername = fields[0].Trim();
 
                     // Compare the stored username with the input username (case-sensitive)
