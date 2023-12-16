@@ -1,3 +1,7 @@
 username,firstname,lastname,email,password,role,year,course,section
 xxchrisxx,Christian,Ortiz,chrisortiz806@gmail.com,5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8,user,1,BSCS,B
+xxchrisxx,Bea,Aran,chrisortiz806@gmail.com,5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8,user,1,BSCS,B
+xxchrisxx,Arwil,Paraiso,chrisortiz806@gmail.com,5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8,user,1,BSCS,B
+xxchrisxx,Raymond Jay,Dollesin,chrisortiz806@gmail.com,5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8,user,1,BSCS,A
+xxchrisxx,John Bhenevic JB,Tugado,chrisortiz806@gmail.com,5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8,user,1,BSCS,A
 Admin,Christian,Ortiz,chrisortiz806@gmail.com,5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8,admin

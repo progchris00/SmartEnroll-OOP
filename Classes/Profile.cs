@@ -48,7 +48,7 @@ namespace Itec102
 
             else if(role == "admin")
             {
-                
+                Csv.LoadUsers();
             }
         }
     }
