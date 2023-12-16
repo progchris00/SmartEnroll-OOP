@@ -248,8 +248,16 @@ namespace Itec102
                 }
                 else if (char.IsDigit(key.KeyChar))
                 {
-                    input += key.KeyChar;
-                    Console.Write(key.KeyChar);
+                    string tempInput = input + key.KeyChar;
+                    if (Regex.IsMatch(tempInput, "^[1-4]$"))
+                    {
+                        input = tempInput;
+                        Console.Write(key.KeyChar);
+                    }
+                    else
+                    {
+                        Console.Beep();
+                    }
                 }
                 else
                 {
