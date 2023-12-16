@@ -43,8 +43,9 @@ namespace Itec102
 
                 else if (userState == "Login")
                 {
+                    string CurrentUserRole = Session.GetCurrentUserRole(Session.GetCurrentUser());
                     Schedule.Today(DayToday, DateToday);
-                    Profile.Load();
+                    Profile.Load(CurrentUserRole);
                 }
 
                 // Print the message inside the box

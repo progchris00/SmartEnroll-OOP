@@ -32,5 +32,22 @@ namespace Itec102
             }
             return null;
         }
+        public static string GetCurrentUserRole(string CurrentUser)
+        {
+            string[] users = {};
+            users = File.ReadAllLines("data/users.csv");
+
+            foreach (var user in users)
+            {
+                string[] fields = user.Split(',');
+                
+                if (fields[0] == CurrentUser)
+                {
+                    string role = fields[5].Trim();
+                    return role;
+                }
+            }
+            return null;
+        }
     }
 }
