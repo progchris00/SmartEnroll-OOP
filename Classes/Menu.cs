@@ -49,7 +49,11 @@ namespace Itec102
                         Schedule.Today(DayToday, DateToday);
                         Profile.Load(CurrentUserRole);
                     }
-                    Profile.Load(CurrentUserRole);
+                    else if (CurrentUserRole == "admin")
+                    {
+                        Schedule.DisplayDateToday(DayToday, DateToday);
+                        Profile.Load(CurrentUserRole);
+                    }
                 }
 
                 // Print the message inside the box

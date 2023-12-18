@@ -44,8 +44,7 @@ public class Schedule
 
     public static void Today(string DayToday, string DateToday)
     {
-        Console.SetCursorPosition(80, 7); 
-        Console.WriteLine($"{DayToday}, {DateToday}");
+        DisplayDateToday(DayToday, DateToday);
         bool Wednesday_B = DayToday == "Wednesday" && Session.GetCurrentUserSection(Session.GetCurrentUser()) == "B";
 
         if (DayToday == "Sunday" || Wednesday_B)
@@ -82,5 +81,11 @@ public class Schedule
                 }
             }
         }
+    }
+
+    public static void DisplayDateToday(string DayToday, string DateToday)
+    {
+        Console.SetCursorPosition(80, 7); 
+        Console.WriteLine($"{DayToday}, {DateToday}");
     }
 }
