@@ -50,7 +50,7 @@ namespace Itec102
             {
                 case "All":
                 {
-                    break;  
+                    break;
                 }
 
                 case "BSCS 1-A":

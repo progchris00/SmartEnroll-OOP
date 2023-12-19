@@ -26,7 +26,7 @@ namespace Itec102
                 
                 if (fields[0] == CurrentUser)
                 {
-                    string section = fields[7].Trim();
+                    string section = fields[8].Trim();
                     return section;
                 }
             }
