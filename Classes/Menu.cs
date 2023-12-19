@@ -90,6 +90,10 @@ namespace Itec102
     
         public int AdminMenu(string status)
         {
+            DateTime currentDate = DateTime.Now;
+            string DateToday = currentDate.ToString("MMMM/dd/yyyy");
+            string DayToday = currentDate.ToString("dddd");
+
             var MainBox = new Box(40,5,70,20);
 
             int selectedIndex = 0;
@@ -101,6 +105,8 @@ namespace Itec102
                 Console.WriteLine(FiggleFonts.Standard.Render("                                              SmartEnroll"));
 
                 MainBox.CreateBox();
+
+                Schedule.DisplayDateToday(DayToday, DateToday);
 
                 // Print the message inside the box
                 Console.SetCursorPosition(59, 9);
