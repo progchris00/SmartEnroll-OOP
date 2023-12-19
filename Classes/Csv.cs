@@ -18,7 +18,7 @@ namespace Itec102
             }
         }
 
-        public static void LoadUsers()
+        public static void LoadUsers(string selectedChoice)
         {
             string[] lines = File.ReadAllLines("data/users.csv");
 

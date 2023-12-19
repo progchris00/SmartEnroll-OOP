@@ -46,23 +46,8 @@ namespace Itec102
             var Menu = new Menu(choices, message, status);
             int indexChoices = Menu.AdminMenu(userState);
 
-            switch (choices[indexChoices])
-            {
-                case "All":
-                {
-                    break;
-                }
-
-                case "BSCS 1-A":
-                {
-                    break;
-                }
-
-                case "BSCS 1-B":
-                {
-                    break;
-                }
-            }
+            string selectedChoice = choices[indexChoices];
+            Csv.LoadUsers(selectedChoice);
         }
     }
 }
