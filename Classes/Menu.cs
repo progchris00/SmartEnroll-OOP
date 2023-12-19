@@ -88,27 +88,24 @@ namespace Itec102
         return selectedIndex;
         }
     
-        public int ShowMenuUser(string status, string userState)
+        public int AdminMenu(string status)
         {
             var MainBox = new Box(40,5,70,20);
-            var LeftBox = new Box(0,7,38,8);
 
             int selectedIndex = 0;
             ConsoleKeyInfo keyInfo;
             
             do
             {
-                // Draw the box on the left side
-                LeftBox.CreateBox();
+                Console.Clear();
+                Console.WriteLine(FiggleFonts.Standard.Render("                                              SmartEnroll"));
+
+                MainBox.CreateBox();
 
                 // Print the message inside the box
-                Console.SetCursorPosition(2, 9);
+                Console.SetCursorPosition(59, 9);
                 Console.WriteLine(message);
-                while (status == "Logout")
-                {
-                    Message.LogoutSuccess();
-                    Account.Login();
-                }
+
                 // Print the choices inside the box
                 for (int i = 0; i < choices.Length; i++)
                 {
@@ -118,9 +115,15 @@ namespace Itec102
                     Console.ForegroundColor = ConsoleColor.Black;
                     }
 
-                    // Print each choice inside the box
-                    Console.SetCursorPosition(2, 11 + i);
-                    Console.WriteLine(choices[i]);
+                    if (choices[i] == "All")
+                    {
+                        Console.SetCursorPosition(73, 12 + i);
+                        Console.WriteLine(choices[i]);
+                    }
+                    else{
+                        Console.SetCursorPosition(71, 12 + i);
+                        Console.WriteLine(choices[i]);
+                    }
 
                     Console.ResetColor();
 

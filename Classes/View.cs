@@ -43,8 +43,8 @@ namespace Itec102
 
             string userState = "Login";
 
-            var HomeMenu = new Menu(choices, message, status);
-            int indexChoices = HomeMenu.ShowMenu(userState);
+            var Menu = new Menu(choices, message, status);
+            int indexChoices = Menu.AdminMenu(userState);
 
             switch (choices[indexChoices])
             {
