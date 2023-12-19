@@ -46,7 +46,7 @@ namespace Itec102
                 {
                     string CurrentUserRole = Session.GetCurrentUserRole(Session.GetCurrentUser());
 
-                    Schedule.Today(DayToday, DateToday);
+                    CertifcateOfRegistration.Today(DayToday, DateToday);
                     Profile.Load(CurrentUserRole);
 
                 }
@@ -106,7 +106,7 @@ namespace Itec102
 
                 MainBox.CreateBox();
 
-                Schedule.DisplayDateToday(DayToday, DateToday);
+                CertifcateOfRegistration.DisplayDateToday(DayToday, DateToday);
 
                 // Print the message inside the box
                 Console.SetCursorPosition(59, 9);

@@ -21,7 +21,7 @@ namespace Itec102
             {
                 case "Schedule":
                 {
-                    CertifcateOfRegistration.Display("1A");
+                    CertifcateOfRegistration.Display("1B");
                     break;  
                 }
 
