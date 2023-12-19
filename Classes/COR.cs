@@ -5,38 +5,38 @@ using Figgle;
 using System.Diagnostics;
 using System.Reflection.PortableExecutable;
 
-namespace Itec102.StudentManagementSystem
+namespace Itec102
 {
-    public class Schedule
+    public class CertifcateOfRegistration
     {
-        public static void Show(string section)
+        public static void Display(string currentUserSection)
         {
-            string[] csvFilePath = {};
+            string[] certificate = {};
+            var mainBox = new Box(38,5,130,61);
 
-            if (section == "1A")
+            if (currentUserSection == "1A")
             {
-                csvFilePath = File.ReadAllLines("data/1A_Schedule.csv");
+                certificate = File.ReadAllLines("data/1A_Schedule.csv");
             }
-            else if (section == "1B")
+            else if (currentUserSection == "1B")
             {
-                csvFilePath = File.ReadAllLines("data/1B_Schedule.csv");
+                certificate = File.ReadAllLines("data/1B_Schedule.csv");
             }
 
-            var MainBox = new Box(38,5,130,61);
-            MainBox.CreateBox();
+            mainBox.CreateBox();
+
             Console.SetCursorPosition(40,7);
 
-            foreach(var SubjectCode in csvFilePath)
+            foreach(var rowOfSubjects in certificate)
             {
-                string [] fields = SubjectCode.Split(',');
+                string[] fields = rowOfSubjects.Split(',');
 
                 string storedSection = fields[0].Trim();
                 string storedSubjCode = fields[1].Trim();
                 string storedSubjTitle = fields[2].Trim();
                 string storedUnits = fields[3].Trim();
                 string storedTimeDate = fields[4].Trim();
-            
-            
+
                 Console.WriteLine( $"{storedSection, -10} \t {storedSubjCode, -10} \t {storedSubjTitle, -40} \t {storedUnits, -10} \t {storedTimeDate, -20}"); // Keep the console window open
                 Console.WriteLine();
                 Console.SetCursorPosition(40, Console.CursorTop + 2); 

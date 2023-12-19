@@ -1,3 +1,5 @@
+using System.Security.Cryptography.X509Certificates;
+
 namespace Itec102
 {
     public class Views
@@ -19,7 +21,7 @@ namespace Itec102
             {
                 case "Schedule":
                 {
-                    Schedule.Show("1A");
+                    CertifcateOfRegistration.Display("1A");
                     break;  
                 }
 
