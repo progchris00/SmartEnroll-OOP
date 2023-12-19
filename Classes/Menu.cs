@@ -1,3 +1,4 @@
+using System.ComponentModel;
 using System.Runtime.ConstrainedExecution;
 using Figgle;
 
@@ -44,16 +45,10 @@ namespace Itec102
                 else if (userState == "Login")
                 {
                     string CurrentUserRole = Session.GetCurrentUserRole(Session.GetCurrentUser());
-                    if (CurrentUserRole == "user")
-                    {
-                        Schedule.Today(DayToday, DateToday);
-                        Profile.Load(CurrentUserRole);
-                    }
-                    else if (CurrentUserRole == "admin")
-                    {
-                        Schedule.DisplayDateToday(DayToday, DateToday);
-                        Profile.Load(CurrentUserRole);
-                    }
+
+                    Schedule.Today(DayToday, DateToday);
+                    Profile.Load(CurrentUserRole);
+
                 }
 
                 // Print the message inside the box
