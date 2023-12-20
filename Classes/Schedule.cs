@@ -5,6 +5,7 @@ namespace Itec102.StudentManagementSystem
     public static void DisplayToday(string DayToday, string DateToday)
         {
             Date.DisplayToday(DayToday, DateToday);
+
             bool Wednesday_B = DayToday == "Wednesday" && Session.GetCurrentUserSection(Session.GetCurrentUser()) == "B";
 
             if (DayToday == "Sunday" || Wednesday_B)

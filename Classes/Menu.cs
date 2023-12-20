@@ -46,7 +46,7 @@ namespace Itec102.StudentManagementSystem
                 {
                     string CurrentUserRole = Session.GetCurrentUserRole(Session.GetCurrentUser());
 
-                    Date.Today(DayToday, DateToday);
+                    Schedule.DisplayToday(DayToday, DateToday);
                     Profile.Load(CurrentUserRole);
 
                 }
@@ -106,7 +106,7 @@ namespace Itec102.StudentManagementSystem
 
                 MainBox.CreateBox();
 
-                CertifcateOfRegistration.DisplayDateToday(DayToday, DateToday);
+                Schedule.DisplayToday(DayToday, DateToday);
 
                 // Print the message inside the box
                 Console.SetCursorPosition(59, 9);
