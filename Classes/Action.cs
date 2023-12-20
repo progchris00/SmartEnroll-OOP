@@ -2,7 +2,7 @@ namespace Itec102.StudentManagementSystem
 {
     public static class Action
     {
-        public static void HandleAction(string choice)
+        public static void Handle(string choice)
         {
             switch (choice)
             {

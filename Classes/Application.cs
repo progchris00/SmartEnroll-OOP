@@ -13,7 +13,7 @@ namespace Itec102.StudentManagementSystem
 
             int indexChoices = LoginRegisterMenu.ShowMenu(userState);
 
-            Action.HandleAction(choices[indexChoices]);
+            Action.Handle(choices[indexChoices]);
         }
     }
 }

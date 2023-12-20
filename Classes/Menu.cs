@@ -126,7 +126,8 @@ namespace Itec102.StudentManagementSystem
                         Console.SetCursorPosition(73, 12 + i);
                         Console.WriteLine(choices[i]);
                     }
-                    else{
+                    else
+                    {
                         Console.SetCursorPosition(71, 12 + i);
                         Console.WriteLine(choices[i]);
                     }
