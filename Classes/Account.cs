@@ -2,11 +2,10 @@ using System.ComponentModel;
 using System.Data;
 using System.Net;
 using System.Net.NetworkInformation;
-using System.Text.RegularExpressions;
 
 namespace Itec102.StudentManagementSystem
 {
-    public class Account
+    public class User
     {
         public static void Login()
         {
@@ -146,7 +145,7 @@ namespace Itec102.StudentManagementSystem
 
                     else if(item == "Year:")
                     {
-                        info = ValidateYear();
+                        info = Validate.Year();
                     }
 
                     else
@@ -163,7 +162,7 @@ namespace Itec102.StudentManagementSystem
 
                             Console.SetCursorPosition(startVertical + 2, startHorizontal + 1);
                         }
-                        else if (item == "Username:" && CheckforDuplicate(info))
+                        else if (item == "Username:" && Validate.UniqueUsername(info))
                         {
                             var UsedUsername = new Box(59, messageBoxTop, 35, 3);
                             UsedUsername.CreateBox();
@@ -174,7 +173,7 @@ namespace Itec102.StudentManagementSystem
                             Console.SetCursorPosition(startVertical + 2, startHorizontal + 1);
                         }
 
-                        else if (item == "Email:" && !ValidateEmail(info))
+                        else if (item == "Email:" && !Validate.Email(info))
                         {
                             var InvalidEmailBox = new Box(59, messageBoxTop, 35, 3);
                             InvalidEmailBox.CreateBox();
@@ -186,7 +185,7 @@ namespace Itec102.StudentManagementSystem
                         }
                     }
 
-                } while (string.IsNullOrEmpty(info) || (item == "Username:" && CheckforDuplicate(info)) || (item == "Password:") && (info.Count() < 8) || item == "Email:" && !ValidateEmail(info));
+                } while (string.IsNullOrEmpty(info) || (item == "Username:" && Validate.UniqueUsername(info)) || (item == "Password:") && (info.Count() < 8) || item == "Email:" && !Validate.Email(info));
 
                 if(item != "Password:")
                 {
@@ -203,79 +202,6 @@ namespace Itec102.StudentManagementSystem
             Csv.Register(InputInformation);
 
             Application.Run();
-        }
-
-        public static bool CheckforDuplicate(string info)
-        {
-            string[] lines = File.ReadAllLines("data/users.csv");
-
-                // Iterate through each line to find the username
-                foreach (var line in lines)
-                {
-                    // Split the line into fields assuming comma (,) as the separator
-                    string[] fields = line.Split(',');
-
-                    // Assuming the username is in the first column
-                    string storedUsername = fields[0].Trim();
-
-                    // Compare the stored username with the input username (case-sensitive)
-                    if (string.Equals(storedUsername, info, StringComparison.Ordinal))
-                    {
-                        return true;
-                    }
-                }
-            return false;
-        }
-
-        public static string ValidateYear()
-        {
-            string input = "";
-            while (true)
-            {
-                ConsoleKeyInfo key = Console.ReadKey(true);
-
-                if (key.Key == ConsoleKey.Enter)
-                {
-                    break;
-                }
-                else if (key.Key == ConsoleKey.Backspace)
-                {
-                    if (input.Length > 0)
-                    {
-                        input = input.Substring(0, input.Length - 1);
-                        Console.Write("\b \b");
-                    }
-                }
-                else if (char.IsDigit(key.KeyChar))
-                {
-                    string tempInput = input + key.KeyChar;
-                    if (Regex.IsMatch(tempInput, "^[1-4]$"))
-                    {
-                        input = tempInput;
-                        Console.Write(key.KeyChar);
-                    }
-                    else
-                    {
-                        Console.Beep();
-                    }
-                }
-                else
-                {
-                    Console.Beep();
-                }
-            }
-            return input;
-        }
-
-        public static bool ValidateEmail(string email)
-        {
-            string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
-
-            Regex regex = new Regex(pattern);
-
-            Match match = regex.Match(email);
-
-            return match.Success;
         }
     }
 }
