@@ -55,13 +55,12 @@ namespace Itec102.StudentManagementSystem
                     string message = "Register account?";
                     string status = "Logout";
 
-                    var RegistrationMenu = new Menu(choices, message, status);
+                    var registrationMenu = new Menu(choices, message, status);
 
-                    int indexChoices = RegistrationMenu.ShowMenu(userState);
+                    int indexChoices = registrationMenu.ShowMenu(userState);
 
                     switch (choices[indexChoices])
                     {
-                        
                         case "Yes":
                         {
                             Register();
