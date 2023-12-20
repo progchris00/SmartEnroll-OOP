@@ -9,8 +9,9 @@ namespace Itec102.StudentManagementSystem
     {
         public static void Login()
         {
-            var MainBox = new Box(40,5,70,20);
-            MainBox.CreateBox();
+            var mainBox = new Box(40,5,70,20);
+            mainBox.CreateBox();
+
             while (true)
             {
                 Console.SetCursorPosition(50, 8);
