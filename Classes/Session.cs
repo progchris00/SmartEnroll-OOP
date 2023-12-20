@@ -1,6 +1,6 @@
 using System.Reflection.PortableExecutable;
 
-namespace Itec102
+namespace Itec102.StudentManagementSystem
 {
     public class Session
     {

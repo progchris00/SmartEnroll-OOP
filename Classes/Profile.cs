@@ -1,6 +1,6 @@
 using System.Diagnostics.Tracing;
 
-namespace Itec102
+namespace Itec102.StudentManagementSystem
 {
     public class Profile
     {

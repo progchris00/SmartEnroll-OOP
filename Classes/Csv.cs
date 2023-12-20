@@ -1,6 +1,6 @@
 using System.Globalization;
 
-namespace Itec102
+namespace Itec102.StudentManagementSystem
 {
     public static class Csv
     {

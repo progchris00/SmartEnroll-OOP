@@ -4,7 +4,7 @@ using System.Net;
 using System.Net.NetworkInformation;
 using System.Text.RegularExpressions;
 
-namespace Itec102
+namespace Itec102.StudentManagementSystem
 {
     public class Account
     {

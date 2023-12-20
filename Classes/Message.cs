@@ -1,7 +1,7 @@
 using System.Net.NetworkInformation;
 using Figgle;
 
-namespace Itec102
+namespace Itec102.StudentManagementSystem
 {
     public class Message
     {

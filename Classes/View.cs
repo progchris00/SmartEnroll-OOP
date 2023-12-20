@@ -1,6 +1,6 @@
 using System.Security.Cryptography.X509Certificates;
 
-namespace Itec102
+namespace Itec102.StudentManagementSystem
 {
     public class Views
     {

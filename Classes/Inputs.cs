@@ -1,5 +1,5 @@
 using System.Text;
-namespace Itec102
+namespace Itec102.StudentManagementSystem
 {
     public class Inputs
     {

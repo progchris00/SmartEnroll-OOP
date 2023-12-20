@@ -2,7 +2,7 @@ using System.ComponentModel.Design;
 using System.Runtime;
 using Figgle;
 
-namespace Itec102
+namespace Itec102.StudentManagementSystem
 {
     public class Home
     {
