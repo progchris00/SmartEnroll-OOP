@@ -46,7 +46,7 @@ namespace Itec102.StudentManagementSystem
                 {
                     string CurrentUserRole = Session.GetCurrentUserRole(Session.GetCurrentUser());
 
-                    CertifcateOfRegistration.Today(DayToday, DateToday);
+                    Date.Today(DayToday, DateToday);
                     Profile.Load(CurrentUserRole);
 
                 }
