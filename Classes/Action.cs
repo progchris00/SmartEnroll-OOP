@@ -7,10 +7,10 @@ namespace Itec102.StudentManagementSystem
             switch (choice)
             {
                 case "Login":
-                    Account.Login();
+                    User.Login();
                     break;
                 case "Register":
-                    Account.Register();
+                    User.Register();
                     break;
             }
         }

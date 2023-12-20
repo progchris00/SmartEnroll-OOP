@@ -8,7 +8,7 @@ namespace Itec102.StudentManagementSystem
 
             Console.Write(" Progress: [ ");
             int progressBarLength = 40; // Adjusted for the box borders
-            int totalSteps = 50; // Adjust the total number of steps for the animation
+            int totalSteps = 100; // Adjust the total number of steps for the animation
             int sleepTime = 10; // Adjust the sleep time between updates (milliseconds)
 
             for (int currentStep = 1; currentStep <= totalSteps; currentStep++)
