@@ -46,10 +46,21 @@ namespace Itec102.StudentManagementSystem
             string userState = "Login";
 
             var Menu = new Menu(choices, message, status);
-            int indexChoices = Menu.AdminMenu(userState);
+            int indexChoices = Menu.ScheduleMenu(userState);
 
             string selectedChoice = choices[indexChoices];
             Csv.LoadUsers(selectedChoice);
+
+            string[] adminChoices = new string[] { "View again", "Logout"};
+
+            string adminMessage = "Choose an option:";
+            string adminStatus = "Logout";
+
+            string adminState = "Login";
+
+            var AdminMenu = new Menu(adminChoices, adminMessage, adminStatus);
+
+            AdminMenu.AdminMenu(adminState);
         }
     }
 }
