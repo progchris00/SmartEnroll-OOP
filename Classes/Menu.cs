@@ -165,7 +165,7 @@ namespace Itec102.StudentManagementSystem
             {
                 Console.Clear();
 
-                Csv.LoadUsers("BSCS 1-A");
+                Csv.LoadUsers(Choice.Get());
 
                 LeftBox.CreateBox();
 

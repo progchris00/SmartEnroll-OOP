@@ -48,8 +48,8 @@ namespace Itec102.StudentManagementSystem
             var Menu = new Menu(choices, message, status);
             int indexChoices = Menu.ScheduleMenu(userState);
 
-            string selectedChoice = choices[indexChoices];
-            Csv.LoadUsers(selectedChoice);
+            Choice.Set(choices[indexChoices]);
+            Csv.LoadUsers(Choice.Get());
 
             string[] adminChoices = new string[] { "View again", "Logout"};
 
@@ -61,7 +61,7 @@ namespace Itec102.StudentManagementSystem
             var AdminMenu = new Menu(adminChoices, adminMessage, adminStatus);
 
             int adminChoice = AdminMenu.AdminMenu(adminState);
-            string adminSelectedChoice = choices[indexChoices];
+            string adminSelectedChoice = adminChoices[adminChoice];
 
             if (adminSelectedChoice == "View again")
             {
@@ -69,7 +69,9 @@ namespace Itec102.StudentManagementSystem
             }
             else
             {
-                CurrentUser.Login();
+                Message.LogoutSuccess();
+                Console.ReadKey();
+                Application.Run();
             }
 
         }
