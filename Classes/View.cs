@@ -38,25 +38,23 @@ namespace Itec102.StudentManagementSystem
         public static void Admin()
         {
 
-            string[] choices = new string[] { "All", "BSCS 1-A", "BSCS 1-B" };
+            string[] sectionChoices = new string[] { "All", "BSCS 1-A", "BSCS 1-B" };
 
-            string message = "View currently enrolled students";
-            string status = "Logout";
+            string sectionMessage = "View currently enrolled students";
+            string sectionStatus = "Logout";
 
-            string userState = "Login";
+            string adminState = "Login";
 
-            var Menu = new Menu(choices, message, status);
-            int indexChoices = Menu.ScheduleMenu(userState);
+            var Menu = new Menu(sectionChoices, sectionMessage, sectionStatus);
+            int indexChoices = Menu.SectionMenu(adminState);
 
-            Choice.Set(choices[indexChoices]);
+            Choice.Set(sectionChoices[indexChoices]);
             Csv.LoadUsers(Choice.Get());
 
             string[] adminChoices = new string[] { "View again", "Logout"};
 
             string adminMessage = "Choose an option:";
             string adminStatus = "Logout";
-
-            string adminState = "Login";
 
             var AdminMenu = new Menu(adminChoices, adminMessage, adminStatus);
 

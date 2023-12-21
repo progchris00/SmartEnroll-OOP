@@ -88,7 +88,7 @@ namespace Itec102.StudentManagementSystem
         return selectedIndex;
         }
 
-        public int ScheduleMenu(string status)
+        public int SectionMenu(string status)
         {
             DateTime currentDate = DateTime.Now;
             string DateToday = currentDate.ToString("MMMM/dd/yyyy");
@@ -109,7 +109,7 @@ namespace Itec102.StudentManagementSystem
                 Schedule.DisplayToday(DayToday, DateToday);
 
                 // Print the message inside the box
-                Console.SetCursorPosition(59, 9);
+                Console.SetCursorPosition(59, 10);
                 Console.WriteLine(message);
 
                 // Print the choices inside the box
@@ -124,12 +124,12 @@ namespace Itec102.StudentManagementSystem
                     // for centering the choices of the menu
                     if (choices[i] == "All")
                     {
-                        Console.SetCursorPosition(73, 12 + i);
+                        Console.SetCursorPosition(73, 13 + i);
                         Console.WriteLine(choices[i]);
                     }
                     else
                     {
-                        Console.SetCursorPosition(71, 12 + i);
+                        Console.SetCursorPosition(71, 13 + i);
                         Console.WriteLine(choices[i]);
                     }
 
