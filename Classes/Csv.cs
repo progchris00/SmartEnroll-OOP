@@ -33,20 +33,41 @@ namespace Itec102.StudentManagementSystem
 
                 string role = fields[5].Trim();
 
-                if (role == "user")
+                if (role == "admin")
                 {
-                    string firstname = fields[1].Trim();
-                    string lastname = fields[2].Trim();
-                    string course = fields[7].Trim();
-                    string year = fields[6].Trim();
-                    string section = fields[8].Trim();
+                    break;
+                }
 
-                    string fullname = $"{firstname} {lastname}";
+                string section = fields[8].Trim();
+                string firstname = fields[1].Trim();
+                string lastname = fields[2].Trim();
+                string course = fields[7].Trim();
+                string year = fields[6].Trim();
 
-                    Console.SetCursorPosition(52, top); 
-                    Console.WriteLine($"{fullname, -20}\t\t{course} - {year}{section}");
+                string sectionCourse = $"{course} {year}-{section}";
 
-                    top += 2;
+                string fullname = $"{firstname} {lastname}";
+
+                if (selectedChoice == "All")
+                {
+                    if (role == "user")
+                    {
+                        Console.SetCursorPosition(52, top); 
+                        Console.WriteLine($"{fullname, -20}\t\t{course} - {year}{section}");
+
+                        top += 2;
+                    }
+                }
+
+                else
+                {
+                    if (role == "user" && sectionCourse == selectedChoice)
+                    {
+                        Console.SetCursorPosition(52, top); 
+                        Console.WriteLine($"{fullname, -20}\t\t{course} - {year}{section}");
+
+                        top += 2;
+                    }
                 }
             }
         }

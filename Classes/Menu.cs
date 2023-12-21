@@ -121,6 +121,7 @@ namespace Itec102.StudentManagementSystem
                     Console.ForegroundColor = ConsoleColor.Black;
                     }
 
+                    // for centering the choices of the menu
                     if (choices[i] == "All")
                     {
                         Console.SetCursorPosition(73, 12 + i);
