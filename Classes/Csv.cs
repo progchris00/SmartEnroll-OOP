@@ -26,10 +26,10 @@ namespace Itec102.StudentManagementSystem
             
             Console.WriteLine(FiggleFonts.Standard.Render("                                              SmartEnroll"));
 
-            Date.DisplayToday();
-
             var mainBox = new Box(40,5,70,20);
             mainBox.CreateBox();
+
+            Date.DisplayToday();
 
             string[] lines = File.ReadAllLines("data/users.csv");
 
