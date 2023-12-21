@@ -156,11 +156,8 @@ namespace Itec102.StudentManagementSystem
 
         public int AdminMenu(string userState)
         {
-            DateTime currentDate = DateTime.Now;
-            string DateToday = currentDate.ToString("MMMM/dd/yyyy");
-            string DayToday = currentDate.ToString("dddd");
+            Date.DisplayToday();
 
-            var MainBox = new Box(40,5,70,20);
             var LeftBox = new Box(0,7,38,8);
 
             int selectedIndex = 0;
@@ -169,12 +166,11 @@ namespace Itec102.StudentManagementSystem
             do
             {
                 Console.Clear();
-                Console.WriteLine(FiggleFonts.Standard.Render("                                              SmartEnroll"));
-
-                MainBox.CreateBox();
-                LeftBox.CreateBox();
 
                 Csv.LoadUsers("BSCS 1-A");
+
+                LeftBox.CreateBox();
+
 
                 // Print the message inside the box
                 Console.SetCursorPosition(2, 9);
