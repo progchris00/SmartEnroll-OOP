@@ -4,7 +4,7 @@ namespace Itec102.StudentManagementSystem
     {
     public static void DisplayToday(string DayToday, string DateToday)
         {
-            Date.DisplayToday(DayToday, DateToday);
+            Date.DisplayToday();
 
             bool Wednesday_B = DayToday == "Wednesday" && Session.GetCurrentUserSection(Session.GetCurrentUser()) == "B";
 

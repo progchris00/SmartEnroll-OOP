@@ -1,4 +1,6 @@
 using System.Globalization;
+using Figgle;
+
 
 namespace Itec102.StudentManagementSystem
 {
@@ -20,6 +22,15 @@ namespace Itec102.StudentManagementSystem
 
         public static void LoadUsers(string selectedChoice)
         {
+            Console.Clear();
+            
+            Console.WriteLine(FiggleFonts.Standard.Render("                                              SmartEnroll"));
+
+            Date.DisplayToday();
+
+            var mainBox = new Box(40,5,70,20);
+            mainBox.CreateBox();
+
             string[] lines = File.ReadAllLines("data/users.csv");
 
             int top = 13;
