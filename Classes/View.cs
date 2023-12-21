@@ -60,7 +60,18 @@ namespace Itec102.StudentManagementSystem
 
             var AdminMenu = new Menu(adminChoices, adminMessage, adminStatus);
 
-            AdminMenu.AdminMenu(adminState);
+            int adminChoice = AdminMenu.AdminMenu(adminState);
+            string adminSelectedChoice = choices[indexChoices];
+
+            if (adminSelectedChoice == "View again")
+            {
+                Admin();
+            }
+            else
+            {
+                CurrentUser.Login();
+            }
+
         }
     }
 }

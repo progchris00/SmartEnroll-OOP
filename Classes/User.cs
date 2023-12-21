@@ -5,7 +5,7 @@ using System.Net.NetworkInformation;
 
 namespace Itec102.StudentManagementSystem
 {
-    public class User
+    public class CurrentUser
     {
         public static void Login()
         {

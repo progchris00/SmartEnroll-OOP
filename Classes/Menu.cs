@@ -156,8 +156,6 @@ namespace Itec102.StudentManagementSystem
 
         public int AdminMenu(string userState)
         {
-            Date.DisplayToday();
-
             var LeftBox = new Box(0,7,38,8);
 
             int selectedIndex = 0;
