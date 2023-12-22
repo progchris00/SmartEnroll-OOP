@@ -30,14 +30,14 @@ namespace Itec102.StudentManagementSystem
                     {
 
                         Console.SetCursorPosition(58, 10); 
-                        Console.WriteLine("SUBJECT\t\tTIME");
+                        Console.WriteLine("SUBJECT\t\t\tTIME");
 
                         string storedSubjectCode = fields[1].Trim();
                         string storedSubjectTitle = fields[2].Trim();
                         string storedTimeDate = fields[3].Trim();
 
-                        Console.SetCursorPosition(58, top); 
-                        Console.WriteLine($"{storedSubjectCode,-15}{storedTimeDate}");
+                        Console.SetCursorPosition(54, top); 
+                        Console.WriteLine($"{storedSubjectCode,-26}{storedTimeDate}");
                         top += 2;
                     }
                 }

@@ -7,7 +7,7 @@ namespace Itec102.StudentManagementSystem
         public static void User()
         {
 
-            string[] choices = new string[] { "Schedule", "Logout" };
+            string[] choices = new string[] { "View COR", "Logout" };
 
             string message = "Choose an option: ";
             string status = "Logout";
@@ -19,7 +19,7 @@ namespace Itec102.StudentManagementSystem
 
             switch (choices[indexChoices])
             {
-                case "Schedule":
+                case "View COR":
                 {
                     CertifcateOfRegistration.Display("1B");
                     break;  

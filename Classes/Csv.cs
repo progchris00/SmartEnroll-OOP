@@ -57,7 +57,7 @@ namespace Itec102.StudentManagementSystem
 
                 string sectionCourse = $"{course} {year}-{section}";
 
-                string fullname = $"{firstname} {lastname}";
+                string fullname = $"{lastname}, {firstname}";
 
                 if (selectedChoice == "All")
                 {
