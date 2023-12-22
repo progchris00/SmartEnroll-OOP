@@ -9,6 +9,8 @@ namespace Itec102.StudentManagementSystem
     {
         public static void Login()
         {
+            int incorrectPasswordCounter = 1;
+
             var mainBox = new Box(40,5,70,20);
             mainBox.CreateBox();
 
@@ -41,7 +43,14 @@ namespace Itec102.StudentManagementSystem
                         else
                         {   
                             Animate.ProgressBar();
+
+                            if (incorrectPasswordCounter == 1)
+                            {
+                                Security.ForgotPassword();
+                            }
+
                             Message.IncorrectPassword();
+                            incorrectPasswordCounter += 1;
                             continue;
                         }
                     }

@@ -65,5 +65,26 @@ namespace Itec102.StudentManagementSystem
             Console.WriteLine("Press any key to continue...");
             Console.SetCursorPosition(89,22);
         }
+
+        public static void ForgotPassword()
+        {
+            var MainBox = new Box(40,5,70,20);
+            
+            Console.Clear();
+            Console.WriteLine(FiggleFonts.Standard.Render("                                              SmartEnroll"));
+            
+            MainBox.CreateBox();
+
+            var ForgotPasswordBox = new Box(55, 13, 39, 3);
+            ForgotPasswordBox.CreateBox();
+
+            Console.SetCursorPosition(58,14);
+            Console.WriteLine("It seems you forgot your password");
+
+            Console.SetCursorPosition(58,22);
+            Console.WriteLine("Press any key to reset password...");
+            Console.SetCursorPosition(92,22);
+            Console.ReadKey();
+        }
     }
 }
