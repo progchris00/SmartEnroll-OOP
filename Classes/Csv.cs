@@ -8,7 +8,7 @@ namespace Itec102.StudentManagementSystem
     {
         public static void Register(List<string> information)
         {
-        TextInfo myTI = new CultureInfo("en-US", false).TextInfo;
+            TextInfo myTI = new CultureInfo("en-US", false).TextInfo;
 
             string filePath = "data/users.csv";
 

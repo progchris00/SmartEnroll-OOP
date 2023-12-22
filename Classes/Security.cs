@@ -31,10 +31,5 @@ namespace Itec102.StudentManagementSystem
             // Compare the stored hash with the newly hashed entered password
             return hashedEnteredPassword == storedHashedPassword;
         }
-
-        public static void ForgotPassword()
-        {
-            Message.ForgotPassword();
-        }
     }
 }
