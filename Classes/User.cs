@@ -89,10 +89,10 @@ namespace Itec102.StudentManagementSystem
             List<string> AccountInformation = new List<string> { "Username:", "First Name:", "Last Name:", "Email:", "Password:", "Year:", "Course:", "Section:" };
             List<string> InputInformation = new List<string>();
 
-            int startVertical = 53;
+            int startVertical = 50;
             int startHorizontal = 9;
 
-            int left = 53;
+            int left = 50;
             int top = 8;
 
             foreach (var item in AccountInformation)
@@ -156,18 +156,18 @@ namespace Itec102.StudentManagementSystem
 
                         if (string.IsNullOrEmpty(info))
                         {
-                            var EmptyInput = new Box(59, messageBoxTop, 35, 3);
+                            var EmptyInput = new Box(55, messageBoxTop, 39, 3);
                             EmptyInput.CreateBox();
-                            Console.SetCursorPosition(60, messagePosition);
+                            Console.SetCursorPosition(58, messagePosition);
                             Console.WriteLine("Input cannot be empty, try again.");
 
                             Console.SetCursorPosition(startVertical + 2, startHorizontal + 1);
                         }
                         else if (item == "Username:" && Validate.UniqueUsername(info))
                         {
-                            var UsedUsername = new Box(59, messageBoxTop, 35, 3);
+                            var UsedUsername = new Box(57, messageBoxTop, 36, 3);
                             UsedUsername.CreateBox();
-                            Console.SetCursorPosition(64, messagePosition);
+                            Console.SetCursorPosition(63, messagePosition);
                             Console.WriteLine("Username already in use.");
 
                             InfoBox.CreateBox();
@@ -176,9 +176,9 @@ namespace Itec102.StudentManagementSystem
 
                         else if (item == "Email:" && !Validate.Email(info))
                         {
-                            var InvalidEmailBox = new Box(59, messageBoxTop, 35, 3);
+                            var InvalidEmailBox = new Box(55, messageBoxTop, 39, 3);
                             InvalidEmailBox.CreateBox();
-                            Console.SetCursorPosition(63, messagePosition);
+                            Console.SetCursorPosition(61, messagePosition);
                             Console.WriteLine("Please enter a valid email.");
 
                             InfoBox.CreateBox();
