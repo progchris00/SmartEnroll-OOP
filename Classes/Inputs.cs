@@ -5,26 +5,49 @@ namespace Itec102.StudentManagementSystem
     {
         public static string Login_Username()
         {
-            var UsernameField = new Box(50, 9, 50, 3);
-            string username;
+            while (true)
+            {
+                var UsernameField = new Box(50, 9, 50, 3);
+                string username;
 
-            UsernameField.CreateBox();
-            Console.SetCursorPosition(50 + 2, 9 + 1);
+                UsernameField.CreateBox();
+                Console.SetCursorPosition(50 + 2, 9 + 1);
 
-            return username = Console.ReadLine();
+                username = Console.ReadLine();
+
+                if (string.IsNullOrWhiteSpace(username))
+                {
+                    Console.Beep();
+                }
+                else
+                {
+                    return username;
+                }
+            }
         }
 
         public static string Login_Password()
         {
-            var PasswordField = new Box(50, 13, 50, 3);
-            string password;
+            while (true)
+            {
+                var PasswordField = new Box(50, 13, 50, 3);
+                string password;
 
-            PasswordField.CreateBox();
-            Console.SetCursorPosition(50 + 2, 13 + 1);
+                PasswordField.CreateBox();
+                Console.SetCursorPosition(50 + 2, 13 + 1);
 
-            password = MaskPassword();
-            return password;
-        } 
+                password = MaskPassword();
+
+                if (string.IsNullOrWhiteSpace(password))
+                {
+                    Console.Beep();
+                }
+                else
+                {
+                    return password;
+                }
+            }
+        }
 
         public static string MaskPassword()
         {
