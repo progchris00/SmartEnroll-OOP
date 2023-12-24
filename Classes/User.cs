@@ -149,6 +149,11 @@ namespace Itec102.StudentManagementSystem
                         info = Validate.Year();
                     }
 
+                    else if(item == "Section:")
+                    {
+                        info = Validate.Section();
+                    }
+
                     else
                     {
                         // For other inputs (non-password)
