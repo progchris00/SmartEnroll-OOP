@@ -121,5 +121,45 @@ namespace Itec102.StudentManagementSystem
 
             return match.Success;
         }
+
+        public static string Section()
+        {
+            string input = "";
+            while (true)
+            {
+                ConsoleKeyInfo key = Console.ReadKey(true);
+
+                if (key.Key == ConsoleKey.Enter)
+                {
+                    break;
+                }
+                else if (key.Key == ConsoleKey.Backspace)
+                {
+                    if (input.Length > 0)
+                    {
+                        input = input.Substring(0, input.Length - 1);
+                        Console.Write("\b \b");
+                    }
+                }
+                else if (char.IsLetter(key.KeyChar))
+                {
+                    string tempInput = input + key.KeyChar;
+                    if (Regex.IsMatch(tempInput, "^[aA-dD]$"))
+                    {
+                        input = tempInput;
+                        Console.Write(char.ToUpper(key.KeyChar));
+                    }
+                    else
+                    {
+                        Console.Beep();
+                    }
+                }
+                else
+                {
+                    Console.Beep();
+                }
+            }
+            return input;
+        }
     }
 }
