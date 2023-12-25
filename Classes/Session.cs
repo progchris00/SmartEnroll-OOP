@@ -49,5 +49,22 @@ namespace Itec102.StudentManagementSystem
             }
             return null;
         }
+        public static string GetCurrentUserYear(string CurrentUser)
+        {
+            string[] users = {};
+            users = File.ReadAllLines("data/users.csv");
+
+            foreach (var user in users)
+            {
+                string[] fields = user.Split(',');
+                
+                if (fields[0] == CurrentUser)
+                {
+                    string year = fields[6].Trim();
+                    return year;
+                }
+            }
+            return null;
+        }
     }
 }

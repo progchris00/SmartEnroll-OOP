@@ -9,10 +9,10 @@ namespace Itec102.StudentManagementSystem
 {
     public class CertifcateOfRegistration
     {
-        public static void Display(string currentUserSection)
+        public static void Display(string currentUserYear, string currentUserSection)
         {
             var mainBox = new Box(38,5,130,61);
-            string[] certificate = File.ReadAllLines($"data/{currentUserSection}_COR.csv");
+            string[] certificate = File.ReadAllLines($"data/{currentUserYear}{currentUserSection}_COR.csv");
 
             mainBox.CreateBox();
 
