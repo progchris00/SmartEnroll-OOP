@@ -31,7 +31,12 @@ namespace Itec102.StudentManagementSystem
                 Console.WriteLine( $"{storedSection, -10} \t {storedSubjCode, -10} \t {storedSubjTitle, -40} \t {storedUnits, -10} \t {storedTimeDate, -20}");
                 Console.WriteLine();
                 Console.SetCursorPosition(40, Console.CursorTop + 2); 
+
+                
             } 
+
+        Console.ReadKey();
+        Views.User();
         }
     }
 }
