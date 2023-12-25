@@ -21,7 +21,10 @@ namespace Itec102.StudentManagementSystem
             {
                 case "View COR":
                 {
-                    CertifcateOfRegistration.Display("1B");
+                    string currentUser = Session.GetCurrentUser();
+                    string currentUserSection = Session.GetCurrentUserSection(currentUser);
+
+                    CertifcateOfRegistration.Display(currentUserSection);
                     break;  
                 }
 
