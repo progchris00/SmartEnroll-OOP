@@ -40,7 +40,7 @@ To start your experience of using or developing SmartEnroll on your local machin
 git clone https://github.com/progchris00/SmartEnroll-OOP.git
 ```
 
-Third-party libraries used by SmartEnroll.
+**Installing of Third Party Libraries**
 
 Figgle is an ASCII banner generator for .NET, the library is bundled with 265 FIGlet fonts to give the developer a wide-range of options, there is also an option to add your own into the library.
 
