@@ -106,7 +106,7 @@ namespace Itec102.StudentManagementSystem
 
                 MainBox.CreateBox();
 
-                Schedule.DisplayToday(DayToday, DateToday);
+                Date.DisplayToday();
 
                 // Print the message inside the box
                 Console.SetCursorPosition(59, 10);
