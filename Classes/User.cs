@@ -170,7 +170,7 @@ namespace Itec102.StudentManagementSystem
                         }
                         else if (item == "Username:" && Validate.UniqueUsername(info))
                         {
-                            var UsedUsername = new Box(57, messageBoxTop, 36, 3);
+                            var UsedUsername = new Box(55, messageBoxTop, 39, 3);
                             UsedUsername.CreateBox();
                             Console.SetCursorPosition(63, messagePosition);
                             Console.WriteLine("Username already in use.");
