@@ -38,7 +38,13 @@ Microsoft.VisualBasic
 Figgle ASCII Art and System.Speech.Synthesis - To use the program, start by downloading necessary third-party libraries like Figgle for ASCII art and Speech for text-to-speech. Open the terminal and enter the following commands: "dotnet add package Figgle" and "dotnet add package Speech."
 
 ### Getting Started(RJ)
-To start your experience of developing SmartEnroll in your local machine, here are some detailed instructions on how you can install necessary third-party components.
+To start your experience of using or developing SmartEnroll on your local machine, here are some detailed instructions on how you can install the system and its necessary third-party packages.
+
+Cloning the repository
+(Make sure to have git installed. Install git [here](https://git-scm.com/downloads).)
+```
+
+```
 
 Before moving onto the download instructions, let us first introduce you to third-party libraries used by SmartEnroll.
 
