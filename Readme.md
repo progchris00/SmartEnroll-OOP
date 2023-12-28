@@ -1,9 +1,9 @@
 ![SmartEnroll preview](https://github.com/progchris00/SmartEnroll-OOP/assets/105027085/31143a22-bf94-4edf-8eba-d75ef48668ef)
 
 # SmartEnroll
-Smart Enroll System is a cutting-edge enrollment management tool crafted in C# to simplify user registration and authentication. It's a console program, making it user-friendly with straightforward login and registration features. You interact with it using simple keyboard inputs and outputs on your computer screen.
+SmartEnroll is an enrollment management system created using C#. It was developed to help students register easily. It's a console program, with a user-friendly interface and safe and secure account authentication.
 
-This application gives you a command-line interface to easily log in or register. When you successfully log in, a cool progress bar animation shows up. For registration, your details are safely stored in a CSV file. It's all about making things smooth and hassle-free!
+This system was developed by the Group 2 1st Year Computer Science students at Laguna State Polytechnic University for their final project on ITEC 102: Introduction to Programming.
 
 ## Table of Contents
 - [Introduction](#smartenroll)
