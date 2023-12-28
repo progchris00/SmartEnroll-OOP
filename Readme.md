@@ -31,22 +31,16 @@ This application gives you a command-line interface to easily log in or register
 
 **file management** -  The program reads a CSV file ("users.csv") to confirm the existence of a username and validate the entered password for a given username. 
 
-### Prerequisites(french)
-
-Microsoft.VisualBasic
-
-Figgle ASCII Art and System.Speech.Synthesis - To use the program, start by downloading necessary third-party libraries like Figgle for ASCII art and Speech for text-to-speech. Open the terminal and enter the following commands: "dotnet add package Figgle" and "dotnet add package Speech."
-
-### Getting Started(RJ)
+### Getting Started
 To start your experience of using or developing SmartEnroll on your local machine, here are some detailed instructions on how you can install the system and its necessary third-party packages.
 
-Cloning the repository
+**Cloning the repository**
 (Make sure to have git installed. Install git [here](https://git-scm.com/downloads).)
+```git
+git clone https://github.com/progchris00/SmartEnroll-OOP.git
 ```
 
-```
-
-Before moving onto the download instructions, let us first introduce you to third-party libraries used by SmartEnroll.
+Third-party libraries used by SmartEnroll.
 
 Figgle is an ASCII banner generator for .NET, the library is bundled with 265 FIGlet fonts to give the developer a wide-range of options, there is also an option to add your own into the library.
 
@@ -62,7 +56,7 @@ Finally, download the text-to-speech third-party library into the source code us
 dotnet add package System.Speech
 ```
 
-### Usage(french)
+### Usage
 
 Use this system to enhance and streamline the process of user enrollment and authentication.  
 
@@ -89,10 +83,10 @@ If you encounter any issues or bugs, please follow these steps to report them:
 
 4. Be responsive to any follow-up questions or requests for additional information from maintainers.
 
-### Contributing(ej)
+### Contributing
 Contributions to the SmartEnroll System have been made by a group of Computer Science students from Group 2. If you come across any issues or have suggestions for improvement, please feel free to open an issue or create a pull request. However, please note that, as of now, we are not accepting additional contributors.
 
-### License(french)
+### License
 
 Copyright © 2023 SmartEnroll.org
 
