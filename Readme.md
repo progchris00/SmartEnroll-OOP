@@ -8,9 +8,7 @@ This system was developed by the Group 2 1st Year Computer Science students at L
 ## Table of Contents
 - [Introduction](#smartenroll)
 - [Features](#features)
-- [Prerequisites](#prerequisites)
 - [Getting Started](#getting-started)
-- [Usage](#Usage)
 - [Reporting Bugs and Issues](#reporting-bugs-and-issues)
 - [Contributing](#contributing)
 - [License](#license)
