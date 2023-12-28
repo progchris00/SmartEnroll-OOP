@@ -48,12 +48,12 @@ Apart from Figgle, SmartEnroll also uses System.Speech.Synthesis for text-to-spe
 
 First, download Figgle into the main source code using the C# terminal. Enter this command into the terminal to initiate the download of Figgle:
 ```
-dotnet add reference Figgle
+dotnet add package Figgle
 ```
 
 Finally, download the text-to-speech third-party library into the source code using this command:
 ```
-dotnet add reference Speech
+dotnet add package System.Speech
 ```
 
 ### Usage(french)
