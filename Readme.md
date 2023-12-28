@@ -42,19 +42,17 @@ git clone https://github.com/progchris00/SmartEnroll-OOP.git
 
 **Installing of Third Party Libraries**
 
-Figgle is an ASCII banner generator for .NET, the library is bundled with 265 FIGlet fonts to give the developer a wide-range of options, there is also an option to add your own into the library.
-
-Apart from Figgle, SmartEnroll also uses System.Speech.Synthesis for text-to-speech functionality. It uses the system's software to synthesize texts into speech using the computer's sound card.
-
 First, download Figgle into the main source code using the C# terminal. Enter this command into the terminal to initiate the download of Figgle:
 ```
 dotnet add package Figgle
 ```
+Figgle is an ASCII banner generator for .NET, the library is bundled with 265 FIGlet fonts to give the developer a wide-range of options, there is also an option to add your own into the library.
 
 Finally, download the text-to-speech third-party library into the source code using this command:
 ```
 dotnet add package System.Speech
 ```
+Apart from Figgle, SmartEnroll also uses System.Speech.Synthesis for text-to-speech functionality. It uses the system's software to synthesize texts into speech using the computer's sound card.
 
 ### Reporting Bugs and Issues
 If you encounter any issues or bugs, please follow these steps to report them:
