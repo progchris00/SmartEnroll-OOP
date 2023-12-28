@@ -6,7 +6,7 @@ namespace Itec102.StudentManagementSystem
     {
         public static void Run()
         {
-            Speak("Welcome to SmartEnroll.");
+            // Speak("Welcome to SmartEnroll.");
 
             string userState = "Logout";
             string[] choices = { "Login", "Register" };

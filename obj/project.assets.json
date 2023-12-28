@@ -14,6 +14,24 @@
             "related": ".xml"
           }
         }
+      },
+      "System.Speech/8.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/System.Speech.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0/System.Speech.dll": {}
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net7.0/System.Speech.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
       }
     }
   },
@@ -32,34 +50,59 @@
         "lib/netstandard2.0/Figgle.xml",
         "logo-square-256px.png"
       ]
+    },
+    "System.Speech/8.0.0": {
+      "sha512": "CNuiA6vb95Oe5PRjClZEBiaju31vwB8OIeCgeSBXyZL6+MS4RVVB2X/C11z0xCkooHE3Vy91nM2z76emIzR+sg==",
+      "type": "package",
+      "path": "system.speech/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Speech.targets",
+        "lib/net462/_._",
+        "lib/net6.0/System.Speech.dll",
+        "lib/net7.0/System.Speech.dll",
+        "lib/net8.0/System.Speech.dll",
+        "lib/netstandard2.0/System.Speech.dll",
+        "runtimes/win/lib/net6.0/System.Speech.dll",
+        "runtimes/win/lib/net7.0/System.Speech.dll",
+        "runtimes/win/lib/net8.0/System.Speech.dll",
+        "system.speech.8.0.0.nupkg.sha512",
+        "system.speech.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "Figgle >= 0.5.1"
+      "Figgle >= 0.5.1",
+      "System.Speech >= 8.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ellye\\.nuget\\packages\\": {}
+    "/home/christian/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ellye\\Documents\\Chris\\Code\\C#\\1SmartEnroll\\SmartEnroll-OOP\\OOP.csproj",
+      "projectUniqueName": "/home/christian/programming/csharp/codes/OOP/OOP.csproj",
       "projectName": "OOP",
-      "projectPath": "C:\\Users\\ellye\\Documents\\Chris\\Code\\C#\\1SmartEnroll\\SmartEnroll-OOP\\OOP.csproj",
-      "packagesPath": "C:\\Users\\ellye\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ellye\\Documents\\Chris\\Code\\C#\\1SmartEnroll\\SmartEnroll-OOP\\obj\\",
+      "projectPath": "/home/christian/programming/csharp/codes/OOP/OOP.csproj",
+      "packagesPath": "/home/christian/.nuget/packages/",
+      "outputPath": "/home/christian/programming/csharp/codes/OOP/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ellye\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/christian/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -81,6 +124,10 @@
           "Figgle": {
             "target": "Package",
             "version": "[0.5.1, )"
+          },
+          "System.Speech": {
+            "target": "Package",
+            "version": "[8.0.0, )"
           }
         },
         "imports": [
@@ -99,7 +146,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.114/RuntimeIdentifierGraph.json"
       }
     }
   }

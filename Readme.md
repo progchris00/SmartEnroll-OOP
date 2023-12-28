@@ -8,7 +8,7 @@ This application gives you a command-line interface to easily log in or register
 - [Features](#features)
 - [Prerequisites](#prerequisites)
 - [Getting Started](#getting-started)
-- [Usage](#usage)
+- [Usage](#Usage)
 - [Reporting Bugs and Issues](#reporting-bugs-and-issues)
 - [Contributing](#contributing)
 - [License](#license)
@@ -31,15 +31,33 @@ This application gives you a command-line interface to easily log in or register
 
 **file management** -  The program reads a CSV file ("users.csv") to confirm the existence of a username and validate the entered password for a given username. 
 
-### Prerequisites
+### Prerequisites(french)
 
 Microsoft.VisualBasic
 
 Figgle ASCII Art and System.Speech.Synthesis - To use the program, start by downloading necessary third-party libraries like Figgle for ASCII art and Speech for text-to-speech. Open the terminal and enter the following commands: "dotnet add package Figgle" and "dotnet add package Speech."
 
-### Getting Started
+### Getting Started(RJ)
+To start your experience of developing SmartEnroll in your local machine, here are some detailed instructions on how you can install necessary third-party components.
 
-### Usage
+Before moving onto the download instructions, let us first introduce you to third-party libraries used by SmartEnroll.
+
+Figgle is an ASCII banner generator for .NET, the library is bundled with 265 FIGlet fonts to give the developer a wide-range of options, there is also an option to add your own into the library.
+
+Apart from Figgle, SmartEnroll also uses System.Speech.Synthesis for text-to-speech functionality. It uses the system's software to synthesize texts into speech using the computer's sound card.
+
+First, download Figgle into the main source code using the C# terminal. Enter this command into the terminal to initiate the download of Figgle:
+```
+dotnet add reference Figgle
+```
+
+Finally, download the text-to-speech third-party library into the source code using this command:
+```
+dotnet add reference Speech
+```
+
+### Usage(french)
+
 Use this system to enhance and streamline the process of user enrollment and authentication.  
 
 ### Reporting Bugs and Issues
@@ -65,10 +83,10 @@ If you encounter any issues or bugs, please follow these steps to report them:
 
 4. Be responsive to any follow-up questions or requests for additional information from maintainers.
 
-### Contributing
+### Contributing(ej)
 Contributions to the SmartEnroll System have been made by a group of Computer Science students from Group 2. If you come across any issues or have suggestions for improvement, please feel free to open an issue or create a pull request. However, please note that, as of now, we are not accepting additional contributors.
 
-### License
+### License(french)
 
 Copyright © 2023 SmartEnroll.org
 

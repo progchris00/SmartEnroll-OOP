@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="Figgle" Version="0.5.1" />
+    <PackageReference Include="System.Speech" Version="8.0.0" />
   </ItemGroup>
 
 </Project>
