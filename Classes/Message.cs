@@ -51,8 +51,8 @@ namespace Itec102.StudentManagementSystem
             var MainBox = new Box(40,5,70,20);
             
             Console.Clear();
-            Console.WriteLine(FiggleFonts.Standard.Render("                                              SmartEnroll"));
-            
+            Console.WriteLine(FiggleFonts.Standard.Render("                                             SmartEnroll"));
+
             MainBox.CreateBox();
 
             var LogoutMessageBox = new Box(57, 13, 35, 3);

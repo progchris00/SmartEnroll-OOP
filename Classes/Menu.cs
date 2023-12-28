@@ -31,7 +31,7 @@ namespace Itec102.StudentManagementSystem
             do
             {
                 Console.Clear();
-                Console.WriteLine(FiggleFonts.Standard.Render("                                              SmartEnroll"));
+                Console.WriteLine(FiggleFonts.Standard.Render("                                             SmartEnroll"));
 
                 MainBox.CreateBox();
                 // Draw the box on the left side
@@ -102,8 +102,7 @@ namespace Itec102.StudentManagementSystem
             do
             {
                 Console.Clear();
-                Console.WriteLine(FiggleFonts.Standard.Render("                                              SmartEnroll"));
-
+                Console.WriteLine(FiggleFonts.Standard.Render("                                             SmartEnroll"));
                 MainBox.CreateBox();
 
                 Date.DisplayToday();
