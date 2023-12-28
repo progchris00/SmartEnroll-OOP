@@ -56,10 +56,6 @@ Finally, download the text-to-speech third-party library into the source code us
 dotnet add package System.Speech
 ```
 
-### Usage
-
-Use this system to enhance and streamline the process of user enrollment and authentication.  
-
 ### Reporting Bugs and Issues
 If you encounter any issues or bugs, please follow these steps to report them:
 
