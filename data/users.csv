@@ -1,7 +1,7 @@
-username,firstname,lastname,email,password,role,year,course,section
-xxchrisxx,Christian,Ortiz,chrisortiz806@gmail.com,5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8,user,1,BSCS,B
-1,Arwil,Paraiso,chrisortiz806@gmail.com,5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8,user,1,BSCS,B
-2,Raymond Jay,Dollesin,chrisortiz806@gmail.com,5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8,user,1,BSCS,A
-3,John Bhenevic,Tugado,chrisortiz806@gmail.com,5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8,user,1,BSCS,A
-4,Jose Enrique,delos Reyes,chrisortiz806@gmail.com,5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8,user,1,BSCS,A
+username,firstname,lastname,email,password,role,year,course,section,status
+xxchrisxx,Christian,Ortiz,chrisortiz806@gmail.com,5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8,user,1,BSCS,B,enrolled
+1,Arwil,Paraiso,chrisortiz806@gmail.com,5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8,user,1,BSCS,B,not-set
+2,Raymond Jay,Dollesin,chrisortiz806@gmail.com,5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8,user,1,BSCS,A,rejected
+3,John Bhenevic,Tugado,chrisortiz806@gmail.com,5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8,user,1,BSCS,A,not-set
+4,Jose Enrique,delos Reyes,chrisortiz806@gmail.com,5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8,user,1,BSCS,A,not-set
 Admin,Christian,Ortiz,chrisortiz806@gmail.com,5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8,admin
