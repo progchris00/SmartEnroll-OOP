@@ -103,8 +103,8 @@ namespace Itec102.StudentManagementSystem
             Console.SetCursorPosition(52,12);
             Console.WriteLine("Your enrollment application has been declined.");
 
-            Console.SetCursorPosition(44,14);
-            Console.WriteLine("If you think this was a mistake, contact admin for assistance.");
+            Console.SetCursorPosition(57,14);
+            Console.WriteLine("Kindly contact admin for assistance.");
 
             Console.SetCursorPosition(62,22);
             Console.WriteLine("Press any key to logout...");
