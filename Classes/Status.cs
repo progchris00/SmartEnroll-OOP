@@ -2,36 +2,39 @@ namespace Itec102.StudentManagementSystem
 {
     public class Status
     {
-        public static void Enrolled()
+        public static void Display(string userStatus)
         {
-            string[] choices = new string[] { "View COR", "Logout" };
-
-            string message = "Choose an option: ";
-            string status = "Logout";
-
-            string userState = "Login";
-
-            var HomeMenu = new Menu(choices, message, status);
-            int indexChoices = HomeMenu.ShowMenu(userState);
-
-            switch (choices[indexChoices])
+            if (userStatus == "enrolled")
             {
-                case "View COR":
-                {
-                    string currentUser = Session.GetCurrentUser();
-                    string currentUserYear = Session.GetCurrentUserYear(currentUser);
-                    string currentUserSection = Session.GetCurrentUserSection(currentUser);
+                string[] choices = new string[] { "View COR", "Logout" };
 
-                    CertifcateOfRegistration.Display(currentUserYear, currentUserSection);
-                    break;  
-                }
+                string message = "Choose an option: ";
+                string status = "Logout";
 
-                case "Logout":
+                string userState = "Login";
+
+                var HomeMenu = new Menu(choices, message, status);
+                int indexChoices = HomeMenu.ShowMenu(userState);
+
+                switch (choices[indexChoices])
                 {
-                    Message.LogoutSuccess();
-                    Console.ReadKey();
-                    Application.Run();
-                    break;
+                    case "View COR":
+                    {
+                        string currentUser = Session.GetCurrentUser();
+                        string currentUserYear = Session.GetCurrentUserYear(currentUser);
+                        string currentUserSection = Session.GetCurrentUserSection(currentUser);
+
+                        CertifcateOfRegistration.Display(currentUserYear, currentUserSection);
+                        break;  
+                    }
+
+                    case "Logout":
+                    {
+                        Message.LogoutSuccess();
+                        Console.ReadKey();
+                        Application.Run();
+                        break;
+                    }
                 }
             }
         }

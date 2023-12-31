@@ -6,8 +6,9 @@ namespace Itec102.StudentManagementSystem
     {
         public static void User()
         {
+            string userStatus = "enrolled";
 
-            
+            Status.Display(userStatus);
         }
 
         public static void Admin()
