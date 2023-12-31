@@ -35,7 +35,7 @@ namespace Itec102.StudentManagementSystem
             Console.WriteLine($"Hello, {fields[0]}");
 
             Console.SetCursorPosition(116, 12);
-            Console.WriteLine($"STATUS: {fields[9]}");
+            Console.WriteLine($"STATUS: {fields[9].ToUpper()}");
 
             Console.SetCursorPosition(116, 14);
             Console.WriteLine($"Name: {fields[1]} {fields[2]}");

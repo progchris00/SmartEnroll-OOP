@@ -6,9 +6,10 @@ namespace Itec102.StudentManagementSystem
     {
         public static void User()
         {
-            string userStatus = "rejected";
+            string currentUser = Session.GetCurrentUser();
+            string currentUserStatus = Session.GetCurrentUserStatus(currentUser);
 
-            Status.Display(userStatus);
+            Status.Display(currentUserStatus);
         }
 
         public static void Admin()

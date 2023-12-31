@@ -66,5 +66,22 @@ namespace Itec102.StudentManagementSystem
             }
             return null;
         }
+        public static string GetCurrentUserStatus(string CurrentUser)
+        {
+            string[] users = {};
+            users = File.ReadAllLines("data/users.csv");
+
+            foreach (var user in users)
+            {
+                string[] fields = user.Split(',');
+                
+                if (fields[0] == CurrentUser)
+                {
+                    string status = fields[9].Trim();
+                    return status;
+                }
+            }
+            return null;
+        }
     }
 }
