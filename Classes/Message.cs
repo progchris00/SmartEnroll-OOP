@@ -68,6 +68,8 @@ namespace Itec102.StudentManagementSystem
 
         public static void Pending()
         {
+            Date.DisplayToday();
+
             var MainBox = new Box(40,5,70,20);
 
             Console.Clear();
@@ -75,15 +77,20 @@ namespace Itec102.StudentManagementSystem
 
             MainBox.CreateBox();
 
-            var LogoutMessageBox = new Box(57, 13, 35, 3);
-            LogoutMessageBox.CreateBox();
+            var PendingMessageBox = new Box(57, 13, 35, 3);
+            PendingMessageBox.CreateBox();
 
             Console.SetCursorPosition(65,14);
-            Console.WriteLine("You've been logout.");
+            Console.WriteLine("Your enrollment is still being process.");
+
+            Console.SetCursorPosition(65,16);
+            Console.WriteLine("Please wait for further notice.");
 
             Console.SetCursorPosition(61,22);
-            Console.WriteLine("Press any key to continue...");
+            Console.WriteLine("Press any key to logout...");
             Console.SetCursorPosition(89,22);
+
+            Console.ReadKey();
         }
     }
 }
