@@ -68,14 +68,13 @@ namespace Itec102.StudentManagementSystem
 
         public static void Pending()
         {
-            Date.DisplayToday();
-
             var MainBox = new Box(40,5,70,20);
 
             Console.Clear();
             Console.WriteLine(FiggleFonts.Standard.Render("                                             SmartEnroll"));
 
             MainBox.CreateBox();
+            Date.DisplayToday();
 
             var PendingMessageBox = new Box(57, 13, 35, 3);
             PendingMessageBox.CreateBox();
@@ -94,14 +93,13 @@ namespace Itec102.StudentManagementSystem
         }
         public static void Rejected()
         {
-            Date.DisplayToday();
-
             var MainBox = new Box(40,5,70,20);
             
             Console.Clear();
             Console.WriteLine(FiggleFonts.Standard.Render("                                             SmartEnroll"));
 
             MainBox.CreateBox();
+            Date.DisplayToday();
 
             var LogoutMessageBox = new Box(57, 13, 35, 3);
             LogoutMessageBox.CreateBox();
@@ -110,11 +108,13 @@ namespace Itec102.StudentManagementSystem
             Console.WriteLine("Your enrollment application was rejected");
 
             Console.SetCursorPosition(65,16);
-            Console.WriteLine("If you think this was a mistake, contact admin.");
+            Console.WriteLine("If you think this was a mistake, please contact the admin.");
 
             Console.SetCursorPosition(61,22);
             Console.WriteLine("Press any key to continue...");
             Console.SetCursorPosition(89,22);
+
+            Console.ReadKey();
         }
     }
 }
