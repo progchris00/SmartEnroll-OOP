@@ -77,18 +77,15 @@ namespace Itec102.StudentManagementSystem
             Profile.Load("user");
             Date.DisplayToday();
 
-            var PendingMessageBox = new Box(57, 13, 35, 3);
-            PendingMessageBox.CreateBox();
+            Console.SetCursorPosition(54,12);
+            Console.WriteLine("We're currently processing your enrollment.");
 
-            Console.SetCursorPosition(65,14);
-            Console.WriteLine("Your enrollment is still being process.");
+            Console.SetCursorPosition(59,14);
+            Console.WriteLine("Please wait for further updates.");
 
-            Console.SetCursorPosition(65,16);
-            Console.WriteLine("Please wait for further notice.");
-
-            Console.SetCursorPosition(61,22);
+            Console.SetCursorPosition(62,22);
             Console.WriteLine("Press any key to logout...");
-            Console.SetCursorPosition(89,22);
+            Console.SetCursorPosition(88,22);
 
             Console.ReadKey();
         }
@@ -103,18 +100,15 @@ namespace Itec102.StudentManagementSystem
             Profile.Load("user");
             Date.DisplayToday();
 
-            var LogoutMessageBox = new Box(57, 13, 35, 3);
-            LogoutMessageBox.CreateBox();
+            Console.SetCursorPosition(52,12);
+            Console.WriteLine("Your enrollment application has been declined.");
 
-            Console.SetCursorPosition(65,14);
-            Console.WriteLine("Your enrollment application was rejected");
+            Console.SetCursorPosition(44,14);
+            Console.WriteLine("If you think this was a mistake, contact admin for assistance.");
 
-            Console.SetCursorPosition(65,16);
-            Console.WriteLine("If you think this was a mistake, please contact the admin.");
-
-            Console.SetCursorPosition(61,22);
+            Console.SetCursorPosition(62,22);
             Console.WriteLine("Press any key to logout...");
-            Console.SetCursorPosition(89,22);
+            Console.SetCursorPosition(88,22);
 
             Console.ReadKey();
         }
