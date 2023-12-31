@@ -74,6 +74,7 @@ namespace Itec102.StudentManagementSystem
             Console.WriteLine(FiggleFonts.Standard.Render("                                             SmartEnroll"));
 
             MainBox.CreateBox();
+            Profile.Load("user");
             Date.DisplayToday();
 
             var PendingMessageBox = new Box(57, 13, 35, 3);
@@ -99,6 +100,7 @@ namespace Itec102.StudentManagementSystem
             Console.WriteLine(FiggleFonts.Standard.Render("                                             SmartEnroll"));
 
             MainBox.CreateBox();
+            Profile.Load("user");
             Date.DisplayToday();
 
             var LogoutMessageBox = new Box(57, 13, 35, 3);

@@ -35,12 +35,15 @@ namespace Itec102.StudentManagementSystem
             Console.WriteLine($"Hello, {fields[0]}");
 
             Console.SetCursorPosition(116, 12);
-            Console.WriteLine($"Name: {fields[1]} {fields[2]}");
+            Console.WriteLine($"STATUS: {fields[9]}");
 
             Console.SetCursorPosition(116, 14);
-            Console.WriteLine($"Year: {fields[6]}st year");
+            Console.WriteLine($"Name: {fields[1]} {fields[2]}");
 
             Console.SetCursorPosition(116, 16);
+            Console.WriteLine($"Year: {fields[6]}st year");
+
+            Console.SetCursorPosition(116, 18);
             Console.WriteLine($"Course: {fields[7]} - {fields[6]}{fields[8]}");
         }
     }
