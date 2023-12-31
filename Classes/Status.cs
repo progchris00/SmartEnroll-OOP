@@ -37,6 +37,11 @@ namespace Itec102.StudentManagementSystem
                     }
                 }
             }
+
+            else if (userStatus == "pending")
+            {
+                Message.Pending();
+            }
         }
     }
 }

@@ -6,7 +6,7 @@ namespace Itec102.StudentManagementSystem
     {
         public static void User()
         {
-            string userStatus = "enrolled";
+            string userStatus = "pending";
 
             Status.Display(userStatus);
         }

@@ -65,5 +65,25 @@ namespace Itec102.StudentManagementSystem
             Console.WriteLine("Press any key to continue...");
             Console.SetCursorPosition(89,22);
         }
+
+        public static void Pending()
+        {
+            var MainBox = new Box(40,5,70,20);
+
+            Console.Clear();
+            Console.WriteLine(FiggleFonts.Standard.Render("                                             SmartEnroll"));
+
+            MainBox.CreateBox();
+
+            var LogoutMessageBox = new Box(57, 13, 35, 3);
+            LogoutMessageBox.CreateBox();
+
+            Console.SetCursorPosition(65,14);
+            Console.WriteLine("You've been logout.");
+
+            Console.SetCursorPosition(61,22);
+            Console.WriteLine("Press any key to continue...");
+            Console.SetCursorPosition(89,22);
+        }
     }
 }
