@@ -16,7 +16,7 @@ namespace Itec102.StudentManagementSystem
             {
                 string HashedPassword = Security.HashPassword(information[4]);
 
-                sw.WriteLine($"{information[0]},{myTI.ToTitleCase(information[1])},{myTI.ToTitleCase(information[2])},{information[3]},{HashedPassword},user,{information[5]},{information[6].ToUpper()},{information[7].ToUpper()}");
+                sw.WriteLine($"{information[0]},{myTI.ToTitleCase(information[1])},{myTI.ToTitleCase(information[2])},{information[3]},{HashedPassword},user,{information[5]},{information[6].ToUpper()},{information[7].ToUpper()},pending");
             }
         }
 
