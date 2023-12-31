@@ -42,6 +42,11 @@ namespace Itec102.StudentManagementSystem
             {
                 Message.Pending();
             }
+
+            else if (userStatus == "rejected")
+            {
+                Message.Rejected();
+            }
         }
     }
 }

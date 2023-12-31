@@ -92,5 +92,29 @@ namespace Itec102.StudentManagementSystem
 
             Console.ReadKey();
         }
+        public static void Rejected()
+        {
+            Date.DisplayToday();
+
+            var MainBox = new Box(40,5,70,20);
+            
+            Console.Clear();
+            Console.WriteLine(FiggleFonts.Standard.Render("                                             SmartEnroll"));
+
+            MainBox.CreateBox();
+
+            var LogoutMessageBox = new Box(57, 13, 35, 3);
+            LogoutMessageBox.CreateBox();
+
+            Console.SetCursorPosition(65,14);
+            Console.WriteLine("Your enrollment application was rejected");
+
+            Console.SetCursorPosition(65,16);
+            Console.WriteLine("If you think this was a mistake, contact admin.");
+
+            Console.SetCursorPosition(61,22);
+            Console.WriteLine("Press any key to continue...");
+            Console.SetCursorPosition(89,22);
+        }
     }
 }
