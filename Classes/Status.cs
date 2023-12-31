@@ -41,11 +41,13 @@ namespace Itec102.StudentManagementSystem
             else if (userStatus == "pending")
             {
                 Message.Pending();
+                Application.Run();
             }
 
             else if (userStatus == "rejected")
             {
                 Message.Rejected();
+                Application.Run();
             }
         }
     }

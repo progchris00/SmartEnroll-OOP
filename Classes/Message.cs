@@ -111,7 +111,7 @@ namespace Itec102.StudentManagementSystem
             Console.WriteLine("If you think this was a mistake, please contact the admin.");
 
             Console.SetCursorPosition(61,22);
-            Console.WriteLine("Press any key to continue...");
+            Console.WriteLine("Press any key to logout...");
             Console.SetCursorPosition(89,22);
 
             Console.ReadKey();
