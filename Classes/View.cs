@@ -14,58 +14,22 @@ namespace Itec102.StudentManagementSystem
 
         public static void Admin()
         {
-            string[] adminMenuChoices = new string[] { "View Enrolled Students", "Review Pending Enrollees", "Sign Out" };
+            string[] adminHomeMenuChoices = new string[] { "View Enrolled Students", "Review Pending Enrollees", "Sign Out" };
 
-            string adminMenuMessage = "Choose an option";
-            string adminMenuStatus = "Logout";
-
-            string adminMenuState = "Login";
-
-            var adminMenu = new Menu(adminMenuChoices, adminMenuMessage, adminMenuStatus);
-            int adminIndexChoices = adminMenu.SectionMenu(adminMenuState);
-
-            switch (adminMenuChoices[adminIndexChoices])
-            {
-                case "View Enrolled Students":
-                string[] sectionChoices = new string[] { "All", "BSCS 1-A", "BSCS 1-B" };
-
-            string sectionMessage = "View currently enrolled students";
-            string sectionStatus = "Logout";
+            string adminHomeMenuMessage = "Choose an option";
+            string adminStatus = "Logout";
 
             string adminState = "Login";
 
-            var Menu = new Menu(sectionChoices, sectionMessage, sectionStatus);
-            int indexChoices = Menu.SectionMenu(adminState);
+            var adminHomeMenu = new Menu(adminHomeMenuChoices, adminHomeMenuMessage, adminStatus);
+            int adminHomeMenuIndex = adminHomeMenu.SectionMenu(adminState);
 
-            Choice.Set(sectionChoices[indexChoices]);
-            Csv.LoadUsers(Choice.Get());
-
-            string[] adminChoices = new string[] { "View again", "Logout"};
-
-            string adminMessage = "Choose an option:";
-            string adminStatus = "Logout";
-
-            var AdminMenu = new Menu(adminChoices, adminMessage, adminStatus);
-
-            int adminChoice = AdminMenu.AdminMenu(adminState);
-            string adminSelectedChoice = adminChoices[adminChoice];
-
-            if (adminSelectedChoice == "View again")
+            switch (adminHomeMenuChoices[adminHomeMenuIndex])
             {
-                Admin();
-            }
-            else
-            {
-                Message.LogoutSuccess();
-                Console.ReadKey();
-                Application.Run();
-            }
-            break;
+                case "View Enrolled Students":
                 
+                break;
             }
-
-            
-
         }
     }
 }
