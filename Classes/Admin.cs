@@ -2,7 +2,7 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace Itec102.StudentManagementSystem
 {
-    public class Admin
+    public class AdminOption
     {
         public static void Enrolled()
         {

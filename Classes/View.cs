@@ -27,7 +27,7 @@ namespace Itec102.StudentManagementSystem
             switch (adminHomeMenuChoices[adminHomeMenuIndex])
             {
                 case "View Enrolled Students":
-                
+                AdminOption.Enrolled();
                 break;
             }
         }
