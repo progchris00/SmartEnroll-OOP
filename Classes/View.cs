@@ -14,8 +14,20 @@ namespace Itec102.StudentManagementSystem
 
         public static void Admin()
         {
+            string[] adminMenuChoices = new string[] { "View Enrolled Students", "View Pending Enrollees", "Logout" };
 
-            string[] sectionChoices = new string[] { "All", "BSCS 1-A", "BSCS 1-B" };
+            string adminMenuMessage = "Choose an option";
+            string adminMenuStatus = "Logout";
+
+            string adminMenuState = "Login";
+
+            var adminMenu = new Menu(adminMenuChoices, adminMenuMessage, adminMenuStatus);
+            int adminIndexChoices = adminMenu.SectionMenu(adminMenuState);
+
+            switch (adminMenuChoices[adminIndexChoices])
+            {
+                case "View Enrolled Students":
+                string[] sectionChoices = new string[] { "All", "BSCS 1-A", "BSCS 1-B" };
 
             string sectionMessage = "View currently enrolled students";
             string sectionStatus = "Logout";
@@ -48,6 +60,11 @@ namespace Itec102.StudentManagementSystem
                 Console.ReadKey();
                 Application.Run();
             }
+            break;
+                
+            }
+
+            
 
         }
     }
