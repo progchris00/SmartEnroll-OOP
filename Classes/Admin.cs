@@ -63,6 +63,7 @@ namespace Itec102.StudentManagementSystem
 
                 string firstname = fields[1].Trim();
                 string lastname = fields[2].Trim();
+                string email = fields[3].Trim();
                 string year = fields[6].Trim();
                 string course = fields[7].Trim();
                 string section = fields[8].Trim();
@@ -72,11 +73,11 @@ namespace Itec102.StudentManagementSystem
                 {
                     string[] adminPendingChoices = new string[] { "Accept", "Reject"};
 
-                    string adminPendingMessage = "Choose an option";
+                    string adminPendingMessage = "Enrolees Information";
                     string adminStatus = "Logout";
 
                     var adminPendingMenu = new Menu(adminPendingChoices, adminPendingMessage, adminStatus);
-                    int adminPendingIndex = adminPendingMenu.PendingMenu(firstname, lastname, year, course, section);
+                    int adminPendingIndex = adminPendingMenu.PendingMenu(firstname, lastname, year, course, section, email);
 
                     switch (adminPendingChoices[adminPendingIndex])
                     {

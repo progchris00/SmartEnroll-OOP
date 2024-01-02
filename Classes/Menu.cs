@@ -205,7 +205,7 @@ namespace Itec102.StudentManagementSystem
 
         return selectedIndex;
         }
-        public int PendingMenu(string firstname, string lastname, string year, string course, string section)
+        public int PendingMenu(string firstname, string lastname, string year, string course, string section, string email)
         {
             var MainBox = new Box(40,5,70,20);
 
@@ -225,10 +225,12 @@ namespace Itec102.StudentManagementSystem
                 Console.WriteLine(message);
 
                 // Print the information of the current user in the box
-                Console.WriteLine($"{firstname}{lastname}");
-                Console.WriteLine($"{year}");
-                Console.WriteLine($"{course}");
-                Console.WriteLine($"{section}");
+                Console.SetCursorPosition(59, 12);
+                Console.WriteLine($"Full name: {firstname} {lastname}");
+                Console.SetCursorPosition(59, 14);
+                Console.WriteLine($"Course: {course}-{year}{section}");
+                Console.SetCursorPosition(59, 16);
+                Console.WriteLine($"Email: {email}");
 
                 // Print the choices inside the box
                 for (int i = 0; i < choices.Length; i++)
@@ -239,17 +241,8 @@ namespace Itec102.StudentManagementSystem
                     Console.ForegroundColor = ConsoleColor.Black;
                     }
 
-                    // for centering the choices of the menu
-                    if (choices[i] == "All")
-                    {
-                        Console.SetCursorPosition(73, 13 + i);
-                        Console.WriteLine(choices[i]);
-                    }
-                    else
-                    {
-                        Console.SetCursorPosition(71, 13 + i);
-                        Console.WriteLine(choices[i]);
-                    }
+                    Console.SetCursorPosition(71, 19 + i);
+                    Console.WriteLine(choices[i]);
 
                     Console.ResetColor();
 
