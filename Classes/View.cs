@@ -29,6 +29,14 @@ namespace Itec102.StudentManagementSystem
                 case "View Enrolled Students":
                 AdminOption.Enrolled();
                 break;
+
+                case "Review Pending Enrollees":
+                Admin.Option.Pending();
+                break;
+
+                case "Sign Out":
+                Application.Run();
+                break;
             }
         }
     }
