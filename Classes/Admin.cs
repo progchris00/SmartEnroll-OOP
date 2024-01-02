@@ -73,7 +73,7 @@ namespace Itec102.StudentManagementSystem
                 {
                     string[] adminPendingChoices = new string[] { "Accept", "Reject"};
 
-                    string adminPendingMessage = "Pending Enrollees";
+                    string adminPendingMessage = "PENDING ENROLLMENTS (1 of 3 Pending)";
                     string adminStatus = "Logout";
 
                     var adminPendingMenu = new Menu(adminPendingChoices, adminPendingMessage, adminStatus);

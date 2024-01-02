@@ -221,18 +221,18 @@ namespace Itec102.StudentManagementSystem
                 Date.DisplayToday();
 
                 // Print the message inside the box
-                Console.SetCursorPosition(59, 10);
+                Console.SetCursorPosition(57, 10);
                 Console.WriteLine(message);
                 
                 Console.SetCursorPosition(45, 12);
-                Console.WriteLine($"Enrollment Information:");
+                Console.WriteLine($"Enrollees Information:");
 
                 // Print the information of the current user in the box
-                Console.SetCursorPosition(45, 14);
-                Console.WriteLine($"Full name: \t\t{firstname} {lastname}");
-                Console.SetCursorPosition(45, 16);
+                Console.SetCursorPosition(45, 15);
+                Console.WriteLine($"Full name:\t\t{firstname} {lastname}");
+                Console.SetCursorPosition(45, 17);
                 Console.WriteLine($"Course: \t\t{course}-{year}{section}");
-                Console.SetCursorPosition(45, 18);
+                Console.SetCursorPosition(45, 19);
                 Console.WriteLine($"Email: \t\t{email}");
 
                 // Print the choices inside the box
@@ -244,7 +244,7 @@ namespace Itec102.StudentManagementSystem
                     Console.ForegroundColor = ConsoleColor.Black;
                     }
 
-                    Console.SetCursorPosition(71, 19 + i);
+                    Console.SetCursorPosition(71, 22 + i);
                     Console.WriteLine(choices[i]);
 
                     Console.ResetColor();
