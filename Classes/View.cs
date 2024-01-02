@@ -31,7 +31,7 @@ namespace Itec102.StudentManagementSystem
                 break;
 
                 case "Review Pending Enrollees":
-                Admin.Option.Pending();
+                AdminOption.Pending();
                 break;
 
                 case "Sign Out":

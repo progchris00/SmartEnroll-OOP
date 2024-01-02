@@ -40,5 +40,10 @@ namespace Itec102.StudentManagementSystem
                 Application.Run();
             }
         } 
+
+        public static void Pending()
+        {
+            Console.WriteLine("Working");
+        }
     }
 }
