@@ -223,14 +223,17 @@ namespace Itec102.StudentManagementSystem
                 // Print the message inside the box
                 Console.SetCursorPosition(59, 10);
                 Console.WriteLine(message);
+                
+                Console.SetCursorPosition(45, 12);
+                Console.WriteLine($"Enrollment Information:");
 
                 // Print the information of the current user in the box
-                Console.SetCursorPosition(59, 12);
-                Console.WriteLine($"Full name: {firstname} {lastname}");
-                Console.SetCursorPosition(59, 14);
-                Console.WriteLine($"Course: {course}-{year}{section}");
-                Console.SetCursorPosition(59, 16);
-                Console.WriteLine($"Email: {email}");
+                Console.SetCursorPosition(45, 14);
+                Console.WriteLine($"Full name: \t\t{firstname} {lastname}");
+                Console.SetCursorPosition(45, 16);
+                Console.WriteLine($"Course: \t\t{course}-{year}{section}");
+                Console.SetCursorPosition(45, 18);
+                Console.WriteLine($"Email: \t\t{email}");
 
                 // Print the choices inside the box
                 for (int i = 0; i < choices.Length; i++)
