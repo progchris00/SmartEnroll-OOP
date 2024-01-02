@@ -45,9 +45,10 @@ namespace Itec102.StudentManagementSystem
 
                 if (role == "admin")
                 {
-                    break;
+                    continue;
                 }
 
+                string status = fields[9].Trim();
                 string section = fields[8].Trim();
                 string firstname = fields[1].Trim();
                 string lastname = fields[2].Trim();
@@ -60,7 +61,7 @@ namespace Itec102.StudentManagementSystem
 
                 if (selectedChoice == "All")
                 {
-                    if (role == "user")
+                    if (role == "user" && status == "enrolled")
                     {
                         Console.SetCursorPosition(52, top); 
                         Console.WriteLine($"{fullname, -20}\t\t{course} - {year}{section}");
@@ -71,7 +72,7 @@ namespace Itec102.StudentManagementSystem
 
                 else
                 {
-                    if (role == "user" && sectionCourse == selectedChoice)
+                    if (role == "user" && sectionCourse == selectedChoice && status == "enrolled")
                     {
                         Console.SetCursorPosition(52, top); 
                         Console.WriteLine($"{fullname, -20}\t\t{course} - {year}{section}");

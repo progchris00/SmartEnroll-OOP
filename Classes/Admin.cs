@@ -19,7 +19,7 @@ namespace Itec102.StudentManagementSystem
             Choice.Set(sectionChoices[indexChoices]);
             Csv.LoadUsers(Choice.Get());
 
-            string[] adminChoices = new string[] { "View again", "Back to Home", "Logout"};
+            string[] adminChoices = new string[] { "View again", "Back", "Logout"};
 
             string adminMessage = "Choose an option:";
             string adminStatus = "Logout";
@@ -33,6 +33,11 @@ namespace Itec102.StudentManagementSystem
             {
                 Enrolled();
             }
+
+            else if (adminSelectedChoice == "Back")
+            {
+                Views.Admin();
+            }
             else
             {
                 Message.LogoutSuccess();
@@ -43,7 +48,60 @@ namespace Itec102.StudentManagementSystem
 
         public static void Pending()
         {
-            Console.WriteLine("Working");
+
+            Date.DisplayToday();
+
+            string[] lines = File.ReadAllLines("data/users.csv");
+            
+            foreach (var line in lines)
+            {
+                string[] fields = line.Split(',');
+
+                string role = fields[5].Trim();
+
+                if (role == "admin")
+                {
+                    continue;
+                }
+
+                string firstname = fields[1].Trim();
+                string lastname = fields[2].Trim();
+                string year = fields[6].Trim();
+                string course = fields[7].Trim();
+                string section = fields[8].Trim();
+                string status = fields[9].Trim();
+
+                if (status == "pending")
+                {
+                    Console.WriteLine(firstname);
+                    string[] adminPendingChoices = new string[] { "Accept", "Reject"};
+
+                    string adminPendingMessage = "Choose an option";
+                    string adminStatus = "Logout";
+
+                    string adminState = "Login";
+
+                    var adminPendingMenu = new Menu(adminPendingChoices, adminPendingMessage, adminStatus);
+                    int adminPendingIndex = adminPendingMenu.SectionMenu(adminState);
+
+                    switch (adminPendingChoices[adminPendingIndex])
+                    {
+                        case "Accept":
+                        Console.WriteLine("Accepted");
+                        break;
+
+                        case "Reject":
+                        Console.WriteLine("Rejected");
+                        break;
+                    }
+                }
+
+                else
+                {
+                    continue;
+                }
+
+            }
         }
     }
 }
