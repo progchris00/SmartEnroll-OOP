@@ -48,6 +48,8 @@ namespace Itec102.StudentManagementSystem
 
         public static void Pending()
         {
+            int count = 0;
+
             string[] lines = File.ReadAllLines("data/users.csv");
             
             foreach (var line in lines)
@@ -71,9 +73,10 @@ namespace Itec102.StudentManagementSystem
 
                 if (status == "pending")
                 {
+                    count += 1;
                     string[] adminPendingChoices = new string[] { "Accept", "Reject"};
 
-                    string adminPendingMessage = "PENDING ENROLLMENTS (1 of 3 Pending)";
+                    string adminPendingMessage = $"PENDING ENROLLMENTS ({count} of 3 Pending)";
                     string adminStatus = "Logout";
 
                     var adminPendingMenu = new Menu(adminPendingChoices, adminPendingMessage, adminStatus);
