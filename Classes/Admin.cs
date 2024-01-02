@@ -98,7 +98,11 @@ namespace Itec102.StudentManagementSystem
                 {
                     continue;
                 }
+            }
 
+            if (count == 0)
+            {
+                Console.WriteLine("No pending enrollees");
             }
         }
     }

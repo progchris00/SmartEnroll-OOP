@@ -244,7 +244,7 @@ namespace Itec102.StudentManagementSystem
                     Console.ForegroundColor = ConsoleColor.Black;
                     }
 
-                    Console.SetCursorPosition(71, 22 + i);
+                    Console.SetCursorPosition(71, 21 + i);
                     Console.WriteLine(choices[i]);
 
                     Console.ResetColor();
