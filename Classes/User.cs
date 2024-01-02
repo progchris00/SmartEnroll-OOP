@@ -209,5 +209,39 @@ namespace Itec102.StudentManagementSystem
 
             Application.Run();
         }
+
+        public static void UpdateStatus(string decision)
+        {
+            string status = "pending";
+
+            string filePath = "data/users.csv";
+
+            List<string> lines = new List<string>();
+
+            using (StreamReader reader = new StreamReader(filePath))
+            {
+                while (!reader.EndOfStream)
+                {
+                    string line = reader.ReadLine();
+                    string[] values = line.Split(',');
+
+                    if (values.Length > 9 && values[9] == status)
+                    {
+                        values[9] = decision;
+                    }
+
+                    string updatedLine = string.Join(",", values);
+                    lines.Add(updatedLine);
+                }
+            }
+
+            using (StreamWriter writer = new StreamWriter(filePath))
+            {
+                foreach (string line in lines)
+                {
+                    writer.WriteLine(line);
+                }
+            }
+        }
     }
 }

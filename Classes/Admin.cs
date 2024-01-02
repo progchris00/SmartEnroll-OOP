@@ -1,3 +1,4 @@
+using System.Reflection.Metadata;
 using System.Security.Cryptography.X509Certificates;
 
 namespace Itec102.StudentManagementSystem
@@ -85,11 +86,11 @@ namespace Itec102.StudentManagementSystem
                     switch (adminPendingChoices[adminPendingIndex])
                     {
                         case "Accept":
-                        Console.WriteLine("Accepted");
+                        CurrentUser.UpdateStatus("enrolled");
                         break;
 
                         case "Reject":
-                        Console.WriteLine("Rejected");
+                        CurrentUser.UpdateStatus("rejected");
                         break;
                     }
                 }
