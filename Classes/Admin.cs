@@ -19,7 +19,7 @@ namespace Itec102.StudentManagementSystem
             Choice.Set(sectionChoices[indexChoices]);
             Csv.LoadUsers(Choice.Get());
 
-            string[] adminChoices = new string[] { "View again", "Logout"};
+            string[] adminChoices = new string[] { "View again", "Back to Home", "Logout"};
 
             string adminMessage = "Choose an option:";
             string adminStatus = "Logout";
