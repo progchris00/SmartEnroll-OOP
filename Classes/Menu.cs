@@ -205,5 +205,64 @@ namespace Itec102.StudentManagementSystem
 
         return selectedIndex;
         }
+        public int PendingMenu(string firstname, string lastname, string year, string course, string section, string email)
+        {
+            var MainBox = new Box(40,5,70,20);
+
+            int selectedIndex = 0;
+            ConsoleKeyInfo keyInfo;
+            
+            do
+            {
+                Console.Clear();
+                Console.WriteLine(FiggleFonts.Standard.Render("                                             SmartEnroll"));
+                MainBox.CreateBox();
+
+                Date.DisplayToday();
+
+                // Print the message inside the box
+                Console.SetCursorPosition(59, 10);
+                Console.WriteLine(message);
+
+                // Print the information of the current user in the box
+                Console.SetCursorPosition(59, 12);
+                Console.WriteLine($"Full name: {firstname} {lastname}");
+                Console.SetCursorPosition(59, 14);
+                Console.WriteLine($"Course: {course}-{year}{section}");
+                Console.SetCursorPosition(59, 16);
+                Console.WriteLine($"Email: {email}");
+
+                // Print the choices inside the box
+                for (int i = 0; i < choices.Length; i++)
+                {
+                    if (i == selectedIndex)
+                    {
+                    Console.BackgroundColor = ConsoleColor.Gray;
+                    Console.ForegroundColor = ConsoleColor.Black;
+                    }
+
+                    Console.SetCursorPosition(71, 19 + i);
+                    Console.WriteLine(choices[i]);
+
+                    Console.ResetColor();
+
+                }
+
+                keyInfo = Console.ReadKey();
+
+                if (keyInfo.Key == ConsoleKey.UpArrow && selectedIndex > 0)
+                    {
+                        selectedIndex--;
+                    }
+
+                else if (keyInfo.Key == ConsoleKey.DownArrow && selectedIndex < choices.Length - 1)
+                    {
+                        selectedIndex++;
+                    }
+
+            } while (keyInfo.Key != ConsoleKey.Enter);
+
+        return selectedIndex;
+        }
     }
 }
