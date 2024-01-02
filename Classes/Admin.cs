@@ -48,9 +48,6 @@ namespace Itec102.StudentManagementSystem
 
         public static void Pending()
         {
-
-            Date.DisplayToday();
-
             string[] lines = File.ReadAllLines("data/users.csv");
             
             foreach (var line in lines)
@@ -73,16 +70,13 @@ namespace Itec102.StudentManagementSystem
 
                 if (status == "pending")
                 {
-                    Console.WriteLine(firstname);
                     string[] adminPendingChoices = new string[] { "Accept", "Reject"};
 
                     string adminPendingMessage = "Choose an option";
                     string adminStatus = "Logout";
 
-                    string adminState = "Login";
-
                     var adminPendingMenu = new Menu(adminPendingChoices, adminPendingMessage, adminStatus);
-                    int adminPendingIndex = adminPendingMenu.SectionMenu(adminState);
+                    int adminPendingIndex = adminPendingMenu.PendingMenu(firstname, lastname, year, course, section);
 
                     switch (adminPendingChoices[adminPendingIndex])
                     {
