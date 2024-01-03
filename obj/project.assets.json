@@ -85,19 +85,19 @@
     ]
   },
   "packageFolders": {
-    "/home/christian/.nuget/packages/": {}
+    "C:\\Users\\astaw\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/christian/programming/csharp/codes/OOP/OOP.csproj",
+      "projectUniqueName": "C:\\Users\\astaw\\Desktop\\New folder\\SmartEnroll-OOP\\OOP.csproj",
       "projectName": "OOP",
-      "projectPath": "/home/christian/programming/csharp/codes/OOP/OOP.csproj",
-      "packagesPath": "/home/christian/.nuget/packages/",
-      "outputPath": "/home/christian/programming/csharp/codes/OOP/obj/",
+      "projectPath": "C:\\Users\\astaw\\Desktop\\New folder\\SmartEnroll-OOP\\OOP.csproj",
+      "packagesPath": "C:\\Users\\astaw\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\astaw\\Desktop\\New folder\\SmartEnroll-OOP\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/christian/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\astaw\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -146,7 +146,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.114/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

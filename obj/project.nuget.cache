@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "trbAZo8lkhmQy5UXvfWIqnOr4x/976hslihrR0wHhzblaQ+aA5VcUfhcG6V/4S9KRIteO286ZI6Xe590qWtNKg==",
+  "dgSpecHash": "M1CZNW+Xls1rwxwpYFE4aYuPK6QYnwzibtKUhSSW+/oWuTFHpZcgExX3K2be6BPFw1iUPrSz+9OdNfF79FNVxA==",
   "success": true,
-  "projectFilePath": "/home/christian/programming/csharp/codes/OOP/OOP.csproj",
+  "projectFilePath": "C:\\Users\\astaw\\Desktop\\New folder\\SmartEnroll-OOP\\OOP.csproj",
   "expectedPackageFiles": [
-    "/home/christian/.nuget/packages/figgle/0.5.1/figgle.0.5.1.nupkg.sha512",
-    "/home/christian/.nuget/packages/system.speech/8.0.0/system.speech.8.0.0.nupkg.sha512"
+    "C:\\Users\\astaw\\.nuget\\packages\\figgle\\0.5.1\\figgle.0.5.1.nupkg.sha512",
+    "C:\\Users\\astaw\\.nuget\\packages\\system.speech\\8.0.0\\system.speech.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }

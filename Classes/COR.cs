@@ -11,12 +11,15 @@ namespace Itec102.StudentManagementSystem
     {
         public static void Display(string currentUserYear, string currentUserSection)
         {
-            var mainBox = new Box(38,5,130,61);
+            var mainBox = new Box(17,5,135,50);
             string[] certificate = File.ReadAllLines($"data/{currentUserYear}{currentUserSection}_COR.csv");
 
+            Console.Clear();
+            Console.WriteLine(FiggleFonts.Standard.Render("                                             SmartEnroll"));
+            
             mainBox.CreateBox();
 
-            Console.SetCursorPosition(40,7);
+            Console.SetCursorPosition(25,7);
 
             foreach(var rowOfSubjects in certificate)
             {
@@ -30,7 +33,7 @@ namespace Itec102.StudentManagementSystem
 
                 Console.WriteLine( $"{storedSection, -10} \t {storedSubjCode, -10} \t {storedSubjTitle, -40} \t {storedUnits, -10} \t {storedTimeDate, -20}");
                 Console.WriteLine();
-                Console.SetCursorPosition(40, Console.CursorTop + 2); 
+                Console.SetCursorPosition(25, Console.CursorTop + 1); 
 
                 
             } 

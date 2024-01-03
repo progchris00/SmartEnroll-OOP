@@ -43,7 +43,7 @@ namespace Itec102.StudentManagementSystem
             {
                 Message.LogoutSuccess();
                 Console.ReadKey();
-                Application.Run();
+                Application.Run("re-login");
             }
         } 
 

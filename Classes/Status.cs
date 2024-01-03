@@ -32,7 +32,7 @@ namespace Itec102.StudentManagementSystem
                     {
                         Message.LogoutSuccess();
                         Console.ReadKey();
-                        Application.Run();
+                        Application.Run("re-login");
                         break;
                     }
                 }
@@ -41,13 +41,13 @@ namespace Itec102.StudentManagementSystem
             else if (userStatus == "pending")
             {
                 Message.Pending();
-                Application.Run();
+                Application.Run("re-login");
             }
 
             else if (userStatus == "rejected")
             {
                 Message.Rejected();
-                Application.Run();
+                Application.Run("re-login");
             }
         }
     }

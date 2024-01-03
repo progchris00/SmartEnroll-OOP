@@ -207,7 +207,7 @@ namespace Itec102.StudentManagementSystem
             Message.RegistrationSuccess();
             Csv.Register(InputInformation);
 
-            Application.Run();
+            Application.Run("re-login");
         }
 
         public static void UpdateStatus(string decision, string currentEnrollee)

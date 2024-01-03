@@ -35,7 +35,7 @@ namespace Itec102.StudentManagementSystem
                 break;
 
                 case "Sign Out":
-                Application.Run();
+                Application.Run("re-login");
                 break;
             }
 

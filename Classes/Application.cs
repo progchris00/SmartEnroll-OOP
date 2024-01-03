@@ -4,9 +4,14 @@ namespace Itec102.StudentManagementSystem
 {
     public class Application
     {
-        public static void Run()
+        public static void Run(string count)
         {
-            // Speak("Welcome to SmartEnroll.");
+            if (count == "first-run")
+            {
+                Console.ReadKey();
+                SpeechSynthesizer synthesizer = new SpeechSynthesizer();
+                synthesizer.Speak("Welcome to SmartEnroll.");
+            }
 
             string userState = "Logout";
             string[] choices = { "Login", "Register" };
@@ -16,6 +21,7 @@ namespace Itec102.StudentManagementSystem
             var LoginRegisterMenu = new Menu(choices, message, status);
 
             int indexChoices = LoginRegisterMenu.ShowMenu(userState);
+
 
             Action.Handle(choices[indexChoices]);
         }

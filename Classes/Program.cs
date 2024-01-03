@@ -4,7 +4,7 @@
     {
         static void Main()
         {
-            Application.Run();
+            Application.Run("first-run");
         }
     }
 }

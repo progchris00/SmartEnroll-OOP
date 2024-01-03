@@ -69,3 +69,22 @@ C:/Users/ellye/Documents/Chris/Code/C#/1SmartEnroll/SmartEnroll-OOP/obj/Debug/ne
 C:/Users/ellye/Documents/Chris/Code/C#/1SmartEnroll/SmartEnroll-OOP/obj/Debug/net7.0/ref/OOP.dll
 /home/christian/programming/csharp/codes/OOP/bin/Debug/net7.0/System.Speech.dll
 /home/christian/programming/csharp/codes/OOP/bin/Debug/net7.0/runtimes/win/lib/net7.0/System.Speech.dll
+C:\Users\astaw\Desktop\New folder\SmartEnroll-OOP\bin\Debug\net7.0\OOP.exe
+C:\Users\astaw\Desktop\New folder\SmartEnroll-OOP\bin\Debug\net7.0\OOP.deps.json
+C:\Users\astaw\Desktop\New folder\SmartEnroll-OOP\bin\Debug\net7.0\OOP.runtimeconfig.json
+C:\Users\astaw\Desktop\New folder\SmartEnroll-OOP\bin\Debug\net7.0\OOP.dll
+C:\Users\astaw\Desktop\New folder\SmartEnroll-OOP\bin\Debug\net7.0\OOP.pdb
+C:\Users\astaw\Desktop\New folder\SmartEnroll-OOP\bin\Debug\net7.0\Figgle.dll
+C:\Users\astaw\Desktop\New folder\SmartEnroll-OOP\bin\Debug\net7.0\System.Speech.dll
+C:\Users\astaw\Desktop\New folder\SmartEnroll-OOP\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Speech.dll
+C:\Users\astaw\Desktop\New folder\SmartEnroll-OOP\obj\Debug\net7.0\OOP.csproj.AssemblyReference.cache
+C:\Users\astaw\Desktop\New folder\SmartEnroll-OOP\obj\Debug\net7.0\OOP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\astaw\Desktop\New folder\SmartEnroll-OOP\obj\Debug\net7.0\OOP.AssemblyInfoInputs.cache
+C:\Users\astaw\Desktop\New folder\SmartEnroll-OOP\obj\Debug\net7.0\OOP.AssemblyInfo.cs
+C:\Users\astaw\Desktop\New folder\SmartEnroll-OOP\obj\Debug\net7.0\OOP.csproj.CoreCompileInputs.cache
+C:\Users\astaw\Desktop\New folder\SmartEnroll-OOP\obj\Debug\net7.0\OOP.csproj.CopyComplete
+C:\Users\astaw\Desktop\New folder\SmartEnroll-OOP\obj\Debug\net7.0\OOP.dll
+C:\Users\astaw\Desktop\New folder\SmartEnroll-OOP\obj\Debug\net7.0\refint\OOP.dll
+C:\Users\astaw\Desktop\New folder\SmartEnroll-OOP\obj\Debug\net7.0\OOP.pdb
+C:\Users\astaw\Desktop\New folder\SmartEnroll-OOP\obj\Debug\net7.0\OOP.genruntimeconfig.cache
+C:\Users\astaw\Desktop\New folder\SmartEnroll-OOP\obj\Debug\net7.0\ref\OOP.dll
