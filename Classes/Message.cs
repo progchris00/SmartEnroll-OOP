@@ -112,5 +112,28 @@ namespace Itec102.StudentManagementSystem
 
             Console.ReadKey();
         }
+
+        public static void NoPending()
+        {
+            var MainBox = new Box(40,5,70,20);
+            
+            Console.Clear();
+            Console.WriteLine(FiggleFonts.Standard.Render("                                             SmartEnroll"));
+
+            MainBox.CreateBox();
+            Date.DisplayToday();
+
+            Console.SetCursorPosition(65,12);
+            Console.WriteLine("You've all caught up.");
+
+            Console.SetCursorPosition(63,14);
+            Console.WriteLine("No pending enrollees yet.");
+
+            Console.SetCursorPosition(61,22);
+            Console.WriteLine("Press any key to go back...");
+            Console.SetCursorPosition(88,22);
+
+            Console.ReadKey();
+        }
     }
 }

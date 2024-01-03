@@ -87,6 +87,7 @@ namespace Itec102.StudentManagementSystem
                     switch (adminPendingChoices[adminPendingIndex])
                     {
                         case "Accept":
+                        Email.Send(email, lastname);
                         CurrentUser.UpdateStatus("enrolled", username);
                         break;
 
@@ -104,8 +105,7 @@ namespace Itec102.StudentManagementSystem
 
             if (count == 0)
             {
-                Console.WriteLine("No pending enrollees");
-                Console.ReadKey();
+                Message.NoPending();
             }
         }
     }
