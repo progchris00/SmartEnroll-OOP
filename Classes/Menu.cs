@@ -221,18 +221,18 @@ namespace Itec102.StudentManagementSystem
                 Date.DisplayToday();
 
                 // Print the message inside the box
-                Console.SetCursorPosition(57, 10);
+                Console.SetCursorPosition(57, 9);
                 Console.WriteLine(message);
                 
                 Console.SetCursorPosition(45, 12);
                 Console.WriteLine($"Enrollees Information:");
 
                 // Print the information of the current user in the box
-                Console.SetCursorPosition(45, 15);
+                Console.SetCursorPosition(45, 14);
                 Console.WriteLine($"Full name:\t\t{firstname} {lastname}");
-                Console.SetCursorPosition(45, 17);
+                Console.SetCursorPosition(45, 16);
                 Console.WriteLine($"Course: \t\t{course}-{year}{section}");
-                Console.SetCursorPosition(45, 19);
+                Console.SetCursorPosition(45, 18);
                 Console.WriteLine($"Email: \t\t{email}");
 
                 // Print the choices inside the box
