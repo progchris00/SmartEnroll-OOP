@@ -105,6 +105,7 @@ namespace Itec102.StudentManagementSystem
             if (count == 0)
             {
                 Console.WriteLine("No pending enrollees");
+                Console.ReadKey();
             }
         }
     }

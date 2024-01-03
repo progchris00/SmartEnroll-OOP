@@ -126,7 +126,7 @@ namespace Itec102.StudentManagementSystem
                         Console.SetCursorPosition(64, 13 + i);
                         Console.WriteLine(choices[i]);
                     }
-                    else
+                    else if (choices[i] == "Review Pending Enrollees.")
                     {
                         Console.SetCursorPosition(71, 13 + i);
                         Console.WriteLine(choices[i]);
