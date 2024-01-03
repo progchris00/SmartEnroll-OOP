@@ -30,5 +30,18 @@ namespace Itec102.StudentManagementSystem
                 Thread.Sleep(sleepTime);
             }
         }
+
+        public static void Typing()
+        {
+            Console.SetCursorPosition(69, 13);
+            string message = "Hello, Human.";
+            int delayseconds = 50;
+
+            foreach (char c in message)
+            {
+                Console.Write(c);
+                Thread.Sleep(delayseconds);
+            }
+        }
     }
 }

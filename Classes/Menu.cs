@@ -1,4 +1,5 @@
 using System.ComponentModel;
+using System.Reflection;
 using System.Runtime.ConstrainedExecution;
 using Figgle;
 
@@ -25,6 +26,8 @@ namespace Itec102.StudentManagementSystem
             var MainBox = new Box(40,5,70,20);
             var LeftBox = new Box(0,7,38,8);
 
+            MainBox.CreateBox();
+
             int selectedIndex = 0;
             ConsoleKeyInfo keyInfo;
             
@@ -34,6 +37,10 @@ namespace Itec102.StudentManagementSystem
                 Console.WriteLine(FiggleFonts.Standard.Render("                                             SmartEnroll"));
 
                 MainBox.CreateBox();
+
+                Console.SetCursorPosition(69, 13);
+                Console.WriteLine("Hello, Human.");
+
                 // Draw the box on the left side
                 LeftBox.CreateBox();
                 
