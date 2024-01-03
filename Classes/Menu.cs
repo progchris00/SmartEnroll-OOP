@@ -108,7 +108,7 @@ namespace Itec102.StudentManagementSystem
                 Date.DisplayToday();
 
                 // Print the message inside the box
-                Console.SetCursorPosition(59, 10);
+                Console.SetCursorPosition(61, 10);
                 Console.WriteLine(message);
 
                 // Print the choices inside the box
@@ -121,9 +121,9 @@ namespace Itec102.StudentManagementSystem
                     }
 
                     // for centering the choices of the menu
-                    if (choices[i] == "All")
+                    if (choices[i] == "View Enrolled Students")
                     {
-                        Console.SetCursorPosition(73, 13 + i);
+                        Console.SetCursorPosition(64, 13 + i);
                         Console.WriteLine(choices[i]);
                     }
                     else
@@ -244,8 +244,17 @@ namespace Itec102.StudentManagementSystem
                     Console.ForegroundColor = ConsoleColor.Black;
                     }
 
-                    Console.SetCursorPosition(71, 21 + i);
-                    Console.WriteLine(choices[i]);
+                    if (choices[i] == "Accept")
+                    {
+                        Console.SetCursorPosition(67, 21);
+                        Console.WriteLine(choices[i]);
+                    }
+
+                    else if (choices[i] == "Reject")
+                    {
+                        Console.SetCursorPosition(77, 21);
+                        Console.WriteLine(choices[i]);
+                    }
 
                     Console.ResetColor();
 

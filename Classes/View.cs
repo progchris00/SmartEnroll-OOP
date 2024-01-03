@@ -16,7 +16,7 @@ namespace Itec102.StudentManagementSystem
         {
             string[] adminHomeMenuChoices = new string[] { "View Enrolled Students", "Review Pending Enrollees", "Sign Out" };
 
-            string adminHomeMenuMessage = "Choose an option";
+            string adminHomeMenuMessage = "What do you want to do today?";
             string adminStatus = "Logout";
 
             string adminState = "Login";
