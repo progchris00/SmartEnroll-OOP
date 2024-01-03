@@ -38,6 +38,8 @@ namespace Itec102.StudentManagementSystem
                 Application.Run();
                 break;
             }
+
+            Admin();
         }
     }
 }
