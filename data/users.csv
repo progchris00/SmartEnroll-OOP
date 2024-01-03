@@ -1,7 +1,4 @@
 username,firstname,lastname,email,password,role,year,course,section,status
 Admin,Christian,Ortiz,chrisortiz806@gmail.com,5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8,admin
-xxchrisxx,Christian,Ortiz,chrisortiz806@gmail.com,5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8,user,1,BSCS,B,enrolled
-1,Arwil,Paraiso,chrisortiz806@gmail.com,5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8,user,1,BSCS,B,enrolled
-3,John Bhenevic,Tugado,johnbhenevic@gmail.com,5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8,user,1,BSCS,A,enrolled
-2,Raymond Jay,Dollesin,rjay@gmail.com,5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8,user,1,BSCS,A,enrolled
-4,Jose Enrique,delos Reyes,abc@gmail.com,5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8,user,1,BSCS,A,enrolled
+chris143,Christian,Ortiz,chrisortiz806@gmail.com,5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8,user,1,BSCS,B,enrolled
+rjay,Rjay,Dollesin,rjaydollesin@gmail.com,5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8,user,1,BSCS,A,enrolled
