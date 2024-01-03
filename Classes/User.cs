@@ -115,7 +115,7 @@ namespace Itec102.StudentManagementSystem
                         if (string.IsNullOrEmpty(info))
                         {
                             // Display an error message for an empty password
-                            var EmptyPasswordBox = new Box(56, messageBoxTop, 39, 3);
+                            var EmptyPasswordBox = new Box(56, messageBoxTop, 40, 3);
                             EmptyPasswordBox.CreateBox();
                             Console.SetCursorPosition(58, messagePosition);
                             Console.WriteLine("Password cannot be empty, try again.");
@@ -126,9 +126,9 @@ namespace Itec102.StudentManagementSystem
 
                         else if(info.Count() < 8)
                         {
-                            var WeakPasswordBox = new Box(58, messageBoxTop, 38, 3);
+                            var WeakPasswordBox = new Box(56, messageBoxTop, 40, 3);
                             WeakPasswordBox.CreateBox();
-                            Console.SetCursorPosition(60, messagePosition);
+                            Console.SetCursorPosition(59, messagePosition);
                             Console.WriteLine("Please create a stronger password.");
 
                             InfoBox.CreateBox();

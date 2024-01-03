@@ -18,7 +18,7 @@ namespace Itec102.StudentManagementSystem
 
         public static void RegistrationSuccess()
         {
-            Console.SetCursorPosition(57,50);
+            Console.SetCursorPosition(54,50);
             Console.WriteLine("Registration Success! Press enter to Login.");
             Console.ReadKey();
         }
