@@ -210,7 +210,7 @@ namespace Itec102.StudentManagementSystem
             Application.Run();
         }
 
-        public static void UpdateStatus(string decision)
+        public static void UpdateStatus(string decision, string currentEnrollee)
         {
             string status = "pending";
 
@@ -225,7 +225,7 @@ namespace Itec102.StudentManagementSystem
                     string line = reader.ReadLine();
                     string[] values = line.Split(',');
 
-                    if (values.Length > 9 && values[9] == status)
+                    if (values.Length > 9 && values[9] == status && values[0] == currentEnrollee)
                     {
                         values[9] = decision;
                     }

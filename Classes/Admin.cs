@@ -64,6 +64,7 @@ namespace Itec102.StudentManagementSystem
                     continue;
                 }
 
+                string username = fields[0].Trim();
                 string firstname = fields[1].Trim();
                 string lastname = fields[2].Trim();
                 string email = fields[3].Trim();
@@ -86,11 +87,11 @@ namespace Itec102.StudentManagementSystem
                     switch (adminPendingChoices[adminPendingIndex])
                     {
                         case "Accept":
-                        CurrentUser.UpdateStatus("enrolled");
+                        CurrentUser.UpdateStatus("enrolled", username);
                         break;
 
                         case "Reject":
-                        CurrentUser.UpdateStatus("rejected");
+                        CurrentUser.UpdateStatus("rejected", username);
                         break;
                     }
                 }
